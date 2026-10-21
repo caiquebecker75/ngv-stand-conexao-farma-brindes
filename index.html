@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<meta name="description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: camisetas, bonés, sacolas, moleskines, canetas e garrafas. Complemento da apresentação do projeto, por 75 LAB.">
+<meta name="description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: brindes de entrada (boné, sacola, ecobag, moleskine, canetas, garrafas) e premium (power bank, fone, carregador sem fio, copo térmico). Complemento da apresentação do projeto, por 75 LAB.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#282629">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NGV Ecossistema — Brindes do stand">
-<meta property="og:description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: camisetas, bonés, sacolas, moleskines, canetas e garrafas. Por 75 LAB.">
+<meta property="og:description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: brindes de entrada (boné, sacola, ecobag, moleskine, canetas, garrafas) e premium (power bank, fone, carregador sem fio, copo térmico). Por 75 LAB.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <title>Brindes NGV Ecossistema</title>
 
@@ -873,6 +873,33 @@ html.deck .controles{
   --brilho:rgba(224,48,128,.28); --bx:18%; --by:24%;
   background:radial-gradient(90% 70% at 96% 92%, rgba(255,103,0,.20) 0%, transparent 62%), var(--preto);
 }
+/* pares branco/preto: o mesmo item lado a lado */
+.pares{display:grid;gap:clamp(16px,2vw,28px);margin-top:clamp(20px,3vh,34px);grid-template-columns:repeat(3,minmax(0,1fr))}
+.pares.dois{grid-template-columns:repeat(2,minmax(0,1fr))}
+.pares.quatro{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1279px){.pares.quatro{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.pares,.pares.dois,.pares.quatro{grid-template-columns:1fr}}
+.par-fotos{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+.par.unico .par-fotos{grid-template-columns:1fr}
+.par .moldura{border-radius:12px}
+.par .moldura img{width:100%;display:block;aspect-ratio:1/1;object-fit:contain;background:#FFFFFF;padding:8px;border-radius:12px}
+.par .moldura img.foto{object-fit:cover;padding:0}
+.par.unico .moldura img{aspect-ratio:2/1}
+.uniforme .par .moldura img{aspect-ratio:4/3}
+.par figcaption{margin-top:10px}
+
+.kit-colunas{display:grid;gap:clamp(20px,3vw,48px);grid-template-columns:6fr 4fr;margin-top:clamp(22px,3.4vh,38px)}
+@media (max-width:760px){.kit-colunas{grid-template-columns:1fr}}
+.kit-rotulo{margin-bottom:10px;font-weight:500;font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;color:var(--laranja)}
+.kit-rotulo.premium{color:var(--ciano)}
+.kit-mini{display:grid;gap:8px;grid-template-columns:repeat(4,minmax(0,1fr))}
+.kit-mini.tres{grid-template-columns:repeat(6,minmax(0,1fr))}
+@media (max-width:760px){.kit-mini.tres{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.kit-mini img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#FFFFFF;border-radius:10px;padding:6px}
+.kit-mini img.foto{object-fit:cover;padding:0}
+#entrada {--brilho:rgba(255,103,0,.24); --bx:85%; --by:18%}
+#premium {--brilho:rgba(0,183,234,.26); --bx:14%; --by:82%}
+#uniforme{--brilho:rgba(142,40,180,.26); --bx:86%; --by:80%}
 /* cinco pontos: o trilho percorre o gradiente inteiro */
 .trilho a:nth-of-type(2){--c:#E10B1B}
 .trilho a:nth-of-type(3){--c:#8E28B4}
@@ -891,9 +918,9 @@ if(matchMedia('(min-width:1080px)').matches) document.documentElement.classList.
 <nav class="trilho" aria-label="Navegação da apresentação">
   <span class="marca"><img src="assets/img/01-ngv.png" alt="NGV"></span>
   <a href="#capa"          data-nome="Abertura"></a>
-  <a href="#camisetas"     data-nome="Camisetas"></a>
-  <a href="#bones-sacolas" data-nome="Bonés e sacolas"></a>
-  <a href="#papelaria"     data-nome="Moleskines, canetas e garrafas"></a>
+  <a href="#entrada"       data-nome="Brindes de Entrada"></a>
+  <a href="#premium"       data-nome="Brindes Premium"></a>
+  <a href="#uniforme"      data-nome="Uniforme da equipe"></a>
   <a href="#kit"           data-nome="O kit"></a>
   <span class="pag" id="contador">01/05</span>
 </nav>
@@ -942,47 +969,47 @@ if(matchMedia('(min-width:1080px)').matches) document.documentElement.classList.
   </div>
 </section>
 
-<!-- ═══════ 02 · CAMISETAS ═══════ -->
-<section class="slide" id="camisetas">
+<!-- ═══════ 02 · BRINDES DE ENTRADA ═══════ -->
+<section class="slide" id="entrada">
   <div class="interno">
-    <p class="olho rev">01 · Camisetas</p>
-    <h2 class="rev d1">Vestir o ecossistema</h2>
-    <p class="texto rev d2" style="margin-top:18px">Cada peça usa o mesmo gradiente e a mesma curva da arquitetura — o ecossistema segue reconhecível fora do espaço.</p>
-    <div class="grade-brindes retrato">
-      <figure class="peca brinde foto rev d2"><div class="moldura"><img class="ampliar" src="assets/img/13-camiseta-ngv-branca-vestida.jpg" alt="Camiseta NGV branca vestida" loading="lazy" decoding="async" width="1000" height="747"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Camiseta · versão clara</figcaption></figure>
-      <figure class="peca brinde foto rev d3"><div class="moldura"><img class="ampliar" src="assets/img/14-camiseta-ngv-preta-vestida.jpg" alt="Camiseta NGV preta vestida" loading="lazy" decoding="async" width="1000" height="747"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Camiseta · versão escura</figcaption></figure>
-      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/15-camiseta-clara-frente-e-costas.webp" alt="Camiseta clara, frente e costas" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Clara · frente e costas</figcaption></figure>
-      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/16-camiseta-escura-frente-e-costas.webp" alt="Camiseta escura, frente e costas" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Escura · frente e costas</figcaption></figure>
+    <p class="olho rev">01 · Entrada</p>
+    <h2 class="rev d1">Brindes de <span class="grifo">Entrada</span></h2>
+    <p class="texto rev d2" style="margin-top:14px">Os itens mais acessíveis do kit, cada um nas versões branca e preta.</p>
+    <div class="pares">
+      <figure class="peca par rev d2"><div class="par-fotos"><div class="moldura"><img class="ampliar " src="assets/img/17-bone-ngv-branco.webp" alt="Boné NGV branco" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar " src="assets/img/18-bone-ngv-preto.webp" alt="Boné NGV preto" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Boné · branco e preto</figcaption></figure>
+      <figure class="peca par rev d3"><div class="par-fotos"><div class="moldura"><img class="ampliar " src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola NGV branca" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar " src="assets/img/23-sacola-ngv-preta.webp" alt="Sacola NGV preta" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Sacola · branca e preta</figcaption></figure>
+      <figure class="peca par rev d4"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/34-ecobag-branca.webp" alt="Ecobag NGV branca" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/35-ecobag-preta.webp" alt="Ecobag NGV preta" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Ecobag · branca e preta</figcaption></figure>
+      <figure class="peca par rev d3"><div class="par-fotos"><div class="moldura"><img class="ampliar " src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine NGV branco" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar " src="assets/img/20-moleskine-ngv-preto.webp" alt="Moleskine NGV preto" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Moleskine · branco e preto</figcaption></figure>
+      <figure class="peca par unico rev d4"><div class="par-fotos"><div class="moldura"><img class="ampliar" src="assets/img/21-canetas-ngv.webp" alt="Canetas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Canetas · branca e preta</figcaption></figure>
+      <figure class="peca par unico rev d5"><div class="par-fotos"><div class="moldura"><img class="ampliar" src="assets/img/22-garrafas-ngv.webp" alt="Garrafas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Garrafas · branca e preta</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 03 · BONÉS E SACOLAS ═══════ -->
-<section class="slide fundo-navy" id="bones-sacolas">
+<!-- ═══════ 03 · BRINDES PREMIUM ═══════ -->
+<section class="slide fundo-navy" id="premium">
   <div class="interno">
-    <p class="olho rev">02 · Bonés e sacolas</p>
-    <h2 class="rev d1">Para levar<br>a marca junto</h2>
-    <p class="texto rev d2" style="margin-top:18px">Nas versões clara e escura, com a curva e o gradiente da NGV.</p>
-    <div class="grade-brindes">
-      <figure class="peca brinde rev d2"><div class="moldura"><img class="ampliar" src="assets/img/17-bone-ngv-branco.webp" alt="Boné NGV branco" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Boné claro</figcaption></figure>
-      <figure class="peca brinde rev d3"><div class="moldura"><img class="ampliar" src="assets/img/18-bone-ngv-preto.webp" alt="Boné NGV preto" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Boné escuro</figcaption></figure>
-      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola NGV branca" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Sacola clara</figcaption></figure>
-      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/23-sacola-ngv-preta.webp" alt="Sacola NGV preta" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Sacola escura</figcaption></figure>
+    <p class="olho rev">02 · Premium</p>
+    <h2 class="rev d1">Brindes <span class="grifo">Premium</span></h2>
+    <p class="texto rev d2" style="margin-top:14px">Os itens de maior valor, cada um nas versões branca e preta.</p>
+    <div class="pares dois">
+      <figure class="peca par rev d2"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/26-powerbank-branco.webp" alt="Power bank NGV branco" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/27-powerbank-preto.webp" alt="Power bank NGV preto" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Power bank · branco e preto</figcaption></figure>
+      <figure class="peca par rev d3"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/28-fone-branco.webp" alt="Fone sem fio NGV branco" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/29-fone-preto.webp" alt="Fone sem fio NGV preto" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Fone sem fio · branco e preto</figcaption></figure>
+      <figure class="peca par rev d4"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/30-carregador-branco.webp" alt="Carregador sem fio NGV branco" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/31-carregador-preto.webp" alt="Carregador sem fio NGV preto" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Carregador sem fio · branco e preto</figcaption></figure>
+      <figure class="peca par rev d5"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/32-copo-branco.webp" alt="Copo térmico NGV branco" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/33-copo-preto.webp" alt="Copo térmico NGV preto" loading="lazy" decoding="async" width="800" height="800"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Copo térmico · branco e preto</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ═══════ 04 · MOLESKINES, CANETAS E GARRAFAS ═══════ -->
-<section class="slide" id="papelaria">
+<!-- ═══════ 04 · UNIFORME DA EQUIPE ═══════ -->
+<section class="slide" id="uniforme">
   <div class="interno">
-    <p class="olho rev">03 · Moleskines, canetas e garrafas</p>
-    <h2 class="rev d1">Da mesa de trabalho<br>ao dia a dia</h2>
-    <p class="texto rev d2" style="margin-top:18px">Peças que ficam por perto depois da visita, com a mesma linguagem do stand.</p>
-    <div class="grade-brindes">
-      <figure class="peca brinde rev d2"><div class="moldura"><img class="ampliar" src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine NGV branco" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Moleskine claro</figcaption></figure>
-      <figure class="peca brinde rev d3"><div class="moldura"><img class="ampliar" src="assets/img/20-moleskine-ngv-preto.webp" alt="Moleskine NGV preto" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Moleskine escuro</figcaption></figure>
-      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/21-canetas-ngv.webp" alt="Canetas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Canetas</figcaption></figure>
-      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/22-garrafas-ngv.webp" alt="Garrafas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Garrafas</figcaption></figure>
+    <p class="olho rev">03 · Uniforme da equipe</p>
+    <h2 class="rev d1">Camisetas da equipe</h2>
+    <p class="texto rev d2" style="margin-top:14px">Uso da organização no stand. As camisetas não fazem parte dos brindes.</p>
+    <div class="pares dois uniforme">
+      <figure class="peca par rev d2"><div class="par-fotos"><div class="moldura"><img class="ampliar foto" src="assets/img/13-camiseta-ngv-branca-vestida.jpg" alt="Camiseta NGV branca vestida" loading="lazy" decoding="async" width="1000" height="1000"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar foto" src="assets/img/14-camiseta-ngv-preta-vestida.jpg" alt="Camiseta NGV preta vestida" loading="lazy" decoding="async" width="1000" height="1000"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Vestida · clara e escura</figcaption></figure>
+      <figure class="peca par rev d3"><div class="par-fotos"><div class="moldura"><img class="ampliar " src="assets/img/15-camiseta-clara-frente-e-costas.webp" alt="Camiseta clara, frente e costas" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><div class="moldura"><img class="ampliar " src="assets/img/16-camiseta-escura-frente-e-costas.webp" alt="Camiseta escura, frente e costas" loading="lazy" decoding="async" width="700" height="700"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div></div><figcaption>Frente e costas · clara e escura</figcaption></figure>
     </div>
   </div>
 </section>
@@ -992,17 +1019,27 @@ if(matchMedia('(min-width:1080px)').matches) document.documentElement.classList.
   <div class="interno">
     <p class="olho rev">04 · O kit</p>
     <p class="frase-kit rev d1">A mesma curva, o mesmo gradiente.<br><span class="grifo">O ecossistema continua reconhecível</span> fora do stand.</p>
-    <div class="kit-faixa rev d2" aria-label="Todas as peças do kit">
-      <img src="assets/img/13-camiseta-ngv-branca-vestida.jpg" alt="Camiseta clara" class="foto" loading="lazy" decoding="async" width="1000" height="747">
-      <img src="assets/img/14-camiseta-ngv-preta-vestida.jpg" alt="Camiseta escura" class="foto" loading="lazy" decoding="async" width="1000" height="747">
-      <img src="assets/img/17-bone-ngv-branco.webp" alt="Boné claro" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/18-bone-ngv-preto.webp" alt="Boné escuro" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola clara" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/23-sacola-ngv-preta.webp" alt="Sacola escura" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine claro" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/20-moleskine-ngv-preto.webp" alt="Moleskine escuro" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/21-canetas-ngv.webp" alt="Canetas" loading="lazy" decoding="async" width="700" height="525">
-      <img src="assets/img/22-garrafas-ngv.webp" alt="Garrafas" loading="lazy" decoding="async" width="700" height="525">
+    <div class="kit-colunas rev d2">
+      <div>
+        <p class="kit-rotulo">Brindes de Entrada</p>
+        <div class="kit-mini tres">
+          <img src="assets/img/17-bone-ngv-branco.webp" alt="Boné" loading="lazy" width="700" height="525">
+          <img src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola" loading="lazy" width="700" height="525">
+          <img src="assets/img/34-ecobag-branca.webp" alt="Ecobag" class="foto" loading="lazy" width="800" height="800">
+          <img src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine" loading="lazy" width="700" height="525">
+          <img src="assets/img/21-canetas-ngv.webp" alt="Canetas" loading="lazy" width="700" height="525">
+          <img src="assets/img/22-garrafas-ngv.webp" alt="Garrafas" loading="lazy" width="700" height="525">
+        </div>
+      </div>
+      <div>
+        <p class="kit-rotulo premium">Brindes Premium</p>
+        <div class="kit-mini">
+          <img src="assets/img/26-powerbank-branco.webp" alt="Power bank" class="foto" loading="lazy" width="800" height="800">
+          <img src="assets/img/28-fone-branco.webp" alt="Fone sem fio" class="foto" loading="lazy" width="800" height="800">
+          <img src="assets/img/30-carregador-branco.webp" alt="Carregador sem fio" class="foto" loading="lazy" width="800" height="800">
+          <img src="assets/img/32-copo-branco.webp" alt="Copo térmico" class="foto" loading="lazy" width="800" height="800">
+        </div>
+      </div>
     </div>
     <div class="kit-rodape rev d3">
       <img class="lab-assinatura" src="assets/img/25-75-lab-ideia-boa-e-a-que-acontece.png" alt="75 LAB — ideia boa é a que acontece" width="720" height="657">
