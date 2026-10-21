@@ -1252,30 +1252,55 @@ if(matchMedia('(min-width:1080px)').matches) document.documentElement.classList.
   }
   addEventListener('hashchange', function(){ if(deck) ir(indiceDoHash()); });
 
-  /* Slide que passe da altura da tela (notebook baixo, janela estreita)
-     encolhe por inteiro até caber, em vez de cortar o rodapé. A largura vai
-     fixa em px junto com o zoom: largura em % seria recalculada no espaço
-     ampliado e as fotos não encolheriam, só o texto. */
+  /* Cada slide ocupa a tela que tiver: procura a maior escala em que o
+     conteúdo cabe na área útil — cresce em monitor grande, encolhe em
+     notebook baixo. A largura vai fixa em px junto com o zoom: largura em %
+     seria recalculada no espaço ampliado e as fotos não acompanhariam o texto.
+     Com sobra de largura, a coluna pode alargar até 1,45× a do projeto (os textos
+     corridos guardam o próprio limite): fica a largura que dá a maior escala. Capa e stand já ocupam
+     a tela inteira por desenho: esses só encolhem, se precisar. */
+  var ESCALA_MIN = .62, ESCALA_MAX = 1.6, ALARGA = [1, 1.15, 1.3, 1.45];
   function ajustar(){
     secoes.forEach(function(s){
       var filhos = [].slice.call(s.children).filter(function(c){
         var p = getComputedStyle(c).position;
         return p !== 'absolute' && p !== 'fixed';
       });
-      filhos.forEach(function(c){ c.style.zoom = ''; c.style.width = ''; });
+      filhos.forEach(function(c){ c.style.zoom = ''; c.style.width = ''; c.style.maxWidth = ''; });
       if(!deck || !filhos.length) return;
       var cs = getComputedStyle(s);
-      var util = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      var utilH = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      var utilW = s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      var larg = filhos.map(function(c){ return c.offsetWidth; });
       var primeiro = filhos[0], ultimo = filhos[filhos.length-1];
-      var conteudo = ultimo.offsetTop + ultimo.offsetHeight + parseFloat(getComputedStyle(ultimo).marginBottom)
-                   - (primeiro.offsetTop - parseFloat(getComputedStyle(primeiro).marginTop));
-      if(conteudo > util + 1){
-        var f = Math.max(.62, util / conteudo);
-        filhos.forEach(function(c){
-          c.style.width = c.offsetWidth + 'px';
-          c.style.zoom = f.toFixed(3);
-        });
+      var mt = parseFloat(getComputedStyle(primeiro).marginTop), mb = parseFloat(getComputedStyle(ultimo).marginBottom);
+      /* altura visual do conteúdo na escala f */
+      function altura(f){
+        filhos.forEach(function(c, i){ c.style.maxWidth = 'none'; c.style.width = Math.min(larg[i] * alarga, utilW / f) + 'px'; });
+        return (ultimo.offsetTop + ultimo.offsetHeight + mb - (primeiro.offsetTop - mt)) * f;
       }
+      var cabe = function(f){ return altura(f) <= utilH * .98; };
+      var fixo = s.classList.contains('capa') || s.classList.contains('hero');
+      var teto = fixo ? 1 : ESCALA_MAX, alarga = 1;
+      /* maior escala que cabe com a coluna alargada em a× */
+      function melhor(a){
+        alarga = a;
+        var lo, hi;
+        if(cabe(1)){ lo = 1; hi = teto; } else { lo = ESCALA_MIN; hi = 1; }
+        if(hi > lo && cabe(hi)) return hi;
+        for(var k = 0; k < 9; k++){ var m = (lo + hi) / 2; if(cabe(m)) lo = m; else hi = m; }
+        return lo;
+      }
+      /* entre as larguras possíveis, fica a que deixa o texto maior (empate: a mais larga) */
+      var f = 0, escolha = 1;
+      var opcoes = (fixo ? [1] : ALARGA).map(function(a){ return [a, melhor(a)]; });
+      var topo = Math.max.apply(null, opcoes.map(function(o){ return o[1]; }));
+      opcoes.forEach(function(o){ if(o[1] >= topo * .98){ escolha = o[0]; f = o[1]; } });
+      alarga = escolha;
+      filhos.forEach(function(c, i){
+        c.style.width = Math.min(larg[i] * alarga, utilW / f) + 'px';
+        c.style.zoom = f.toFixed(3);
+      });
     });
   }
   var esperaAjuste;
