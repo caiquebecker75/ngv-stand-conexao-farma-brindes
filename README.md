@@ -12,10 +12,10 @@ Mesmo visual e navegação do deck principal (o `index.html` parte dele): slide 
 | # | id | conteúdo |
 |---|----|----------|
 | 1 | `capa` | A marca continua depois da feira |
-| 2 | `entrada` | Brindes de Entrada: boné, sacola, ecobag e moleskine (branco e preto lado a lado), canetas e garrafas |
+| 2 | `entrada` | Brindes de Entrada: boné, sacola, ecobag, moleskine e garrafa (branco e preto lado a lado) e canetas |
 | 3 | `premium` | Brindes Premium: power bank, fone sem fio, carregador sem fio e copo térmico (branco e preto) |
 | 4 | `uniforme` | Uniforme da equipe: camisetas de uso da organização (não são brinde) |
-| 5 | `kit` | Resumo Entrada / Premium, assinatura 75 LAB e link para a apresentação do stand |
+| 5 | `kit` | Frase de fechamento, assinatura 75 LAB e link para a apresentação do stand |
 
 ## Estrutura
 
