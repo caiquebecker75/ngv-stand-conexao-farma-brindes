@@ -1,0 +1,1527 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: camisetas, bonés, sacolas, moleskines, canetas e garrafas. Complemento da apresentação do projeto, por 75 LAB.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#282629">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NGV Ecossistema — Brindes do stand">
+<meta property="og:description" content="Brindes do stand NGV Ecossistema na Abradilan Conexão Farma: camisetas, bonés, sacolas, moleskines, canetas e garrafas. Por 75 LAB.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<title>Brindes NGV Ecossistema</title>
+
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-400.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/inter-600.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/inter-700.woff2) format('woff2');}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url(assets/fonts/inter-800.woff2) format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/poppins-300.woff2) format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/poppins-400.woff2) format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/poppins-500.woff2) format('woff2');}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(assets/fonts/poppins-600.woff2) format('woff2');}
+
+:root{
+  /* ── paleta oficial NGV (Manual da Marca, p.13-15) ───────────── */
+  --preto:      #282629;
+  --navy:       #15305A;
+  --petroleo:   #005669;
+  --ciano:      #00B7EA;
+  --ciano-claro:#43C3EC;
+  --azul:       #4A6FFE;
+  --roxo:       #8E28B4;
+  --magenta:    #E03080;
+  --vermelho:   #E10B1B;
+  --laranja:    #FF6700;
+  --branco:     #FFFFFF;
+  --nevoa:      #ABB5CF;   /* texto secundário */
+  --ardosia:    #6D798D;   /* texto terciário  */
+
+  /* superfícies e linhas derivadas por transparência da névoa */
+  --superficie:  rgba(171,181,207,.045);
+  --superficie-2:rgba(171,181,207,.075);
+  --linha:       rgba(171,181,207,.17);
+  --linha-forte: rgba(171,181,207,.30);
+
+  /* ── gradientes oficiais ──────────────────────────────────────── */
+  --g-marca:  linear-gradient(100deg,#FF6700 0%,#E10B1B 26%,#8E28B4 56%,#4A6FFE 80%,#00B7EA 100%);
+  --g-quente: linear-gradient(105deg,#FF6700 0%,#E10B1B 52%,#8E28B4 100%);
+  --g-frio:   linear-gradient(150deg,#15305A 0%,#005669 55%,#00B7EA 100%);
+  --g-neutro: linear-gradient(180deg,#ABB5CF 0%,#15305A 58%,#282629 100%);
+  /* recorte em texto: evita o roxo profundo, que não tem contraste sobre o preto */
+  --g-texto:  linear-gradient(96deg,#FF6700 0%,#E03080 40%,#43C3EC 78%,#00B7EA 100%);
+
+  --f-titulo: Inter, system-ui, sans-serif;
+  --f-corpo:  Poppins, system-ui, sans-serif;
+
+  /* ── escala tipográfica ────────────────────────────────────────
+     Um único tamanho base. Todo o resto sai de multiplicar ou
+     dividir por φ = 1,618. Cinco degraus, sem meio-termo:
+
+       micro   = base ÷ φ    ≈ 0,62 ×   rótulos, olho, legendas
+       corpo   = base        =    1 ×   texto principal
+       sub     = base × φ    ≈ 1,62 ×   cabeçalho, frase de destaque
+       titulo  = base × φ²   ≈ 2,62 ×   título de seção
+       display = base × φ³   ≈ 4,24 ×   capa, manifesto, fecho
+
+     Quando dois papéis dividem o mesmo degrau, quem separa é peso,
+     família e cor — nunca um tamanho fora da escala. Em tela
+     estreita os papéis de display descem um degrau; a escala não
+     se deforma, muda só a atribuição. */
+  --phi:  1.618;
+  --base: clamp(16px, 0.94rem + 0.22vw, 17.5px);
+  --t-micro:   calc(var(--base) / var(--phi));
+  --t-corpo:   var(--base);
+  --t-sub:     calc(var(--base) * var(--phi));
+  --t-titulo:  calc(var(--base) * var(--phi) * var(--phi));
+  --t-display: calc(var(--base) * var(--phi) * var(--phi) * var(--phi));
+
+  /* entrelinha por degrau: quanto maior o corpo, mais fechada */
+  --e-micro: 1.45;
+  --e-corpo: 1.68;
+  --e-sub:   1.3;
+  --e-titulo:1.06;
+  --e-display:1.02;
+
+  --rail: 92px;
+  --pad-x: clamp(24px,6vw,104px);
+  --raio: 16px;
+}
+
+*{box-sizing:border-box}
+/* os atributos width/height do <img> so definem a proporcao; a altura segue a largura */
+img{max-width:100%;height:auto;display:block}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--preto);
+  color:var(--branco);
+  font-family:var(--f-corpo);
+  font-weight:300;
+  font-size:var(--t-corpo);
+  line-height:var(--e-corpo);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ─────────── progresso ─────────── */
+.progresso{position:fixed;inset:0 0 auto 0;height:3px;z-index:60;background:rgba(171,181,207,.14)}
+.progresso i{display:block;height:100%;width:0;background:var(--g-marca)}
+
+/* ─────────── trilho ─────────── */
+.trilho{
+  position:fixed;left:0;top:0;bottom:0;width:var(--rail);z-index:50;
+  display:none;flex-direction:column;align-items:center;justify-content:center;gap:15px;
+  border-right:1px solid var(--linha);background:var(--preto);
+}
+.trilho .marca{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:34px;opacity:.95}
+.trilho .marca img{width:100%;display:block}
+.trilho a{
+  width:6px;height:6px;border-radius:50%;background:var(--ardosia);opacity:.55;position:relative;
+  transition:transform .3s,opacity .3s,background .3s;
+}
+.trilho a[data-ativo]{background:var(--laranja);opacity:1;transform:scale(2)}
+.trilho a:hover{opacity:1}
+.trilho a::after{
+  content:attr(data-nome);position:absolute;left:18px;top:50%;transform:translateY(-50%);
+  font-family:var(--f-corpo);font-weight:500;font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase;
+  color:var(--nevoa);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s;
+}
+.trilho a:hover::after{opacity:1}
+.trilho a:focus-visible{outline:2px solid var(--ciano);outline-offset:5px}
+.trilho .pag{
+  position:absolute;bottom:22px;left:50%;transform:translateX(-50%);
+  font-size:var(--t-micro);font-weight:500;letter-spacing:.09em;color:var(--ardosia);font-variant-numeric:tabular-nums;
+}
+@media (min-width:1080px){.trilho{display:flex} body{padding-left:var(--rail)}}
+
+/* ─────────── seções ─────────── */
+.slide{
+  position:relative;min-height:100svh;padding:clamp(60px,7.4vh,98px) var(--pad-x);
+  display:flex;flex-direction:column;justify-content:center;overflow:hidden;
+  border-bottom:1px solid var(--linha);
+}
+.slide > .interno{width:100%;max-width:1180px;margin-inline:auto;position:relative;z-index:1}
+.fundo-navy{background:var(--navy);border-bottom-color:rgba(171,181,207,.22)}
+
+h1,h2,h3{font-family:var(--f-titulo);font-weight:700;text-wrap:balance;margin:0;letter-spacing:-.025em}
+h2{font-size:var(--t-titulo);line-height:var(--e-titulo)}
+h3{font-size:var(--t-sub);line-height:var(--e-sub);letter-spacing:-.018em}
+p{margin:0}
+.texto{max-width:63ch;color:var(--nevoa)}
+.texto + .texto{margin-top:1.05em}
+strong{color:var(--branco);font-weight:500}
+
+.grifo{background:var(--g-texto);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.olho{
+  display:flex;align-items:center;gap:12px;margin-bottom:22px;
+  font-weight:500;font-size:var(--t-micro);line-height:var(--e-micro);letter-spacing:.15em;text-transform:uppercase;color:var(--nevoa);
+}
+.olho::before{content:"";width:28px;height:2px;border-radius:2px;background:var(--g-quente)}
+
+.frase{
+  font-family:var(--f-titulo);font-weight:600;letter-spacing:-.02em;
+  font-size:var(--t-sub);line-height:var(--e-sub);
+}
+
+/* ─────────── capa ─────────── */
+.capa{padding-top:clamp(52px,6.4vh,88px);padding-bottom:clamp(52px,6.4vh,88px)}
+/* logotipo ancorado no topo, bloco de texto na base */
+.capa > .interno{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+/* em tela estreita o vao vira excesso: aproxima os blocos e libera a base para a fita */
+@media (max-width:760px){
+  .capa > .interno{justify-content:flex-start;gap:clamp(44px,11vh,96px)}
+}
+.capa .fita{position:absolute;inset:0;pointer-events:none}
+.capa .fita svg{width:100%;height:100%;display:block}
+/* área de segurança do logotipo: nenhum elemento invade a margem 1x em volta */
+.lockup{width:clamp(168px,19vw,262px);display:block}
+.capa h1{
+  font-family:var(--f-titulo);font-weight:800;
+  font-size:var(--t-titulo);line-height:var(--e-display);letter-spacing:-.038em;
+}
+.capa .lede{
+  font-weight:300;font-size:var(--t-sub);line-height:var(--e-sub);
+  color:var(--nevoa);max-width:44ch;margin-top:18px;
+}
+.capa .fio{height:2px;border-radius:2px;background:var(--g-marca);margin:clamp(20px,3vh,34px) 0 16px}
+.capa .rodape{
+  display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between;
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.11em;text-transform:uppercase;color:var(--ardosia);
+}
+
+/* ─────────── ecossistema ─────────── */
+.eco{margin-top:clamp(16px,2.4vh,28px)}
+.eco svg{width:100%;height:auto;display:block;overflow:visible}
+.eco .no{stroke:var(--navy);stroke-width:3}   /* o anel acompanha o fundo da seção */
+.eco text{font-family:var(--f-titulo);font-size:15px;font-weight:600;fill:var(--branco);text-anchor:middle}
+.cadeia{
+  display:flex;flex-wrap:wrap;align-items:center;gap:9px 14px;margin-top:clamp(16px,2.4vh,28px);
+  font-family:var(--f-titulo);font-weight:600;font-size:var(--t-sub);line-height:var(--e-sub);letter-spacing:-.018em;
+}
+.cadeia u{text-decoration:none;color:var(--ardosia)}
+.cadeia u:last-of-type{color:var(--branco)}
+.cadeia i{font-style:normal;color:var(--laranja)}
+
+/* ─────────── jornada ─────────── */
+.atos{display:grid;gap:clamp(20px,2.4vw,34px);grid-template-columns:repeat(auto-fit,minmax(255px,1fr));margin-top:clamp(30px,5vh,50px)}
+.ato{position:relative;padding-top:26px;border-top:1px solid var(--linha)}
+.ato::before{content:"";position:absolute;top:-1px;left:0;width:42%;height:2px;border-radius:2px}
+.ato:nth-child(1)::before{background:linear-gradient(90deg,#FF6700,#E10B1B)}
+.ato:nth-child(2)::before{background:linear-gradient(90deg,#E10B1B,#8E28B4)}
+.ato:nth-child(3)::before{background:linear-gradient(90deg,#4A6FFE,#00B7EA)}
+.ato .num{display:block;margin-bottom:12px;font-weight:600;font-size:var(--t-micro);letter-spacing:.14em;text-transform:uppercase}
+.ato:nth-child(1) .num{color:var(--laranja)}
+.ato:nth-child(2) .num{color:var(--magenta)}
+.ato:nth-child(3) .num{color:var(--ciano)}
+.ato h3{margin-bottom:12px}
+.ato p{color:var(--nevoa);font-size:var(--t-corpo)}
+
+/* ─────────── manifesto ─────────── */
+.manifesto .interno{max-width:930px}
+.manifesto .verso{
+  font-family:var(--f-titulo);font-weight:700;letter-spacing:-.028em;
+  font-size:var(--t-titulo);line-height:var(--e-titulo);text-wrap:balance;
+}
+.manifesto .verso + .verso{margin-top:.5em}
+.manifesto .miudo{color:var(--nevoa);max-width:60ch;margin-top:clamp(18px,2.6vh,30px)}
+.tres{
+  display:grid;gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:clamp(18px,2.8vh,32px);
+}
+.tres > div{
+  background:var(--navy);padding:22px;
+  font-family:var(--f-titulo);font-weight:600;font-size:var(--t-sub);line-height:var(--e-sub);letter-spacing:-.018em;
+}
+.tres > div > span{display:block;margin-bottom:11px;font-family:var(--f-corpo);font-weight:500;font-size:var(--t-micro);letter-spacing:.13em;text-transform:uppercase}
+.tres > div:nth-child(1) > span{color:var(--laranja)}
+.tres > div:nth-child(2) > span{color:var(--magenta)}
+.tres > div:nth-child(3) > span{color:var(--ciano)}
+
+/* ─────────── gradientes da marca ─────────── */
+.paleta{display:grid;gap:clamp(16px,1.8vw,26px);grid-template-columns:repeat(auto-fit,minmax(210px,1fr));margin-top:clamp(20px,3.2vh,36px)}
+.cor .amostra{height:clamp(96px,12vh,140px);border-radius:var(--raio)}
+.cor .a1{background:var(--g-quente)}
+.cor .a2{background:var(--g-frio)}
+.cor .a3{background:var(--g-neutro)}
+.cor b{display:block;margin:14px 0 7px;font-weight:500;font-size:var(--t-micro);letter-spacing:.13em;text-transform:uppercase;color:var(--ardosia)}
+.cor p{font-size:var(--t-corpo);color:var(--nevoa)}
+.cor p em{font-style:normal;color:var(--branco);font-weight:500}
+.cor code{font-family:var(--f-corpo);font-weight:400;font-size:var(--t-micro);letter-spacing:.06em;color:var(--ardosia);display:block;margin-top:8px}
+
+/* ─────────── diretrizes ─────────── */
+/* ─────────── fecho ─────────── */
+.fecho{border-bottom:none}
+.fecho .interno{max-width:1000px}
+.fecho .linhas{font-family:var(--f-titulo);font-weight:800;font-size:var(--t-titulo);line-height:var(--e-display);letter-spacing:-.042em}
+.fecho .linhas > span{display:block}
+.fecho .linhas > span:nth-child(2){color:var(--nevoa)}
+.fecho .linhas > span:nth-child(3){color:var(--ardosia)}
+.fecho .arremate{
+  margin-top:clamp(20px,3vh,34px);padding-top:20px;border-top:1px solid var(--linha);
+  font-size:var(--t-sub);line-height:var(--e-sub);color:var(--nevoa);max-width:52ch;font-weight:300;
+}
+.assinatura{display:flex;align-items:center;gap:22px;margin-top:clamp(22px,3.2vh,38px);flex-wrap:wrap}
+.assinatura img{width:clamp(130px,13.5vw,178px);display:block}   /* vale no fecho e no obrigado */
+.nota{font-weight:400;font-size:var(--t-micro);letter-spacing:.09em;color:var(--ardosia);text-transform:uppercase;max-width:34ch}
+
+/* acento curvo nos divisores */
+.fecho .acento{
+  position:absolute;top:clamp(48px,9vh,104px);right:clamp(24px,5vw,88px);
+  width:clamp(150px,20vw,290px);height:auto;display:block;opacity:.5;z-index:0;pointer-events:none;
+}
+@media (max-width:760px){.fecho .acento{display:none}}
+
+/* ─────────── revelação ─────────── */
+.js .rev{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+.js .rev.dentro{opacity:1;transform:none}
+.rev.d1{transition-delay:.07s}.rev.d2{transition-delay:.14s}.rev.d3{transition-delay:.21s}
+.rev.d4{transition-delay:.28s}.rev.d5{transition-delay:.35s}.rev.d6{transition-delay:.42s}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rev{opacity:1;transform:none;transition:none}
+  .tracejo{animation:none!important;stroke-dasharray:none!important;stroke-dashoffset:0!important}
+}
+@keyframes revelar-fita{to{clip-path:inset(0 0 0 0)}}
+/* ── atribuição em tela larga ──────────────────────────────────
+   Os três papéis de display sobem para base × φ³. Abaixo disso
+   ficam um degrau atrás, para a linha não estourar a coluna. */
+@media (min-width:820px){
+  .capa h1,
+  .manifesto .verso,
+  .fecho .linhas{font-size:var(--t-display)}
+}
+
+/* ═══════════ imagens do projeto ═══════════ */
+.chapa{margin:0;position:relative}
+.chapa img,.chapa .vazio{
+  width:100%;display:block;border-radius:var(--raio);
+  background:var(--superficie);
+}
+.chapa img{object-fit:cover}
+/* placeholder enquanto o render nao esta na pasta */
+.chapa .vazio{
+  aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;
+  border:1px dashed var(--linha-forte);
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.14em;text-transform:uppercase;color:var(--ardosia);
+  text-align:center;padding:20px;
+}
+.chapa figcaption{
+  margin-top:14px;font-size:var(--t-corpo);line-height:var(--e-corpo);color:var(--nevoa);max-width:56ch;
+}
+.chapa figcaption b{
+  display:block;font-family:var(--f-titulo);font-weight:600;font-size:var(--t-corpo);
+  letter-spacing:-.015em;color:var(--branco);margin-bottom:5px;
+}
+
+/* ─────────── hero do stand: imagem sangrando ─────────── */
+.hero{padding-left:0;padding-right:0;justify-content:flex-start}
+.hero > .cabecalho{width:100%;max-width:1180px;margin:0 auto clamp(24px,4vh,44px);padding:0 var(--pad-x)}
+.hero .chapa{width:100%;border-radius:0}
+.hero .chapa img,.hero .chapa .vazio{
+  border-radius:0;max-height:62svh;object-fit:cover;
+}
+/* o render vem recortado, sem fundo: entra inteiro e flutua sobre a seção */
+.hero .chapa img{object-fit:contain;background:none}
+.hero .chapa .moldura::after{display:none}
+.hero .chapa .vazio{aspect-ratio:auto;height:52svh}
+.hero .legenda{
+  width:100%;max-width:1180px;margin:clamp(20px,3vh,34px) auto 0;padding:0 var(--pad-x);
+  display:grid;gap:clamp(16px,3vw,44px);grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+.hero .legenda p{color:var(--nevoa);font-size:var(--t-corpo)}
+
+/* ─────────── galeria ─────────── */
+.galeria{
+  display:grid;gap:clamp(18px,2.2vw,30px);margin-top:clamp(26px,4vh,44px);
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+}
+.galeria .chapa img,.galeria .chapa .vazio{aspect-ratio:4/3}
+
+/* ─────────── jornada com imagem ─────────── */
+.atos .chapa{margin-bottom:18px}
+.atos .chapa img,.atos .chapa .vazio{aspect-ratio:4/3}
+.ato{display:flex;flex-direction:column}
+
+/* ─────────── planta ─────────── */
+.planta{display:grid;gap:clamp(24px,3.4vw,56px);grid-template-columns:1fr;margin-top:clamp(24px,4vh,42px)}
+@media (min-width:900px){.planta{grid-template-columns:1.55fr 1fr;align-items:center}}
+.planta .chapa img,.planta .chapa .vazio{
+  background:var(--branco);border-radius:var(--raio);
+}
+.planta .chapa .vazio{background:var(--superficie)}
+.zonas{display:flex;flex-direction:column;gap:2px}
+.zona{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--linha)}
+.zona:last-child{border-bottom:none}
+.zona i{width:10px;height:10px;border-radius:50%;display:block;transform:translateY(2px)}
+.zona b{font-family:var(--f-titulo);font-weight:600;font-size:var(--t-corpo);letter-spacing:-.015em;display:block}
+.zona span{display:block;color:var(--nevoa);font-size:var(--t-corpo);margin-top:3px}
+
+/* ─────────── peças de PDV: faixa discreta no fim de "Por dentro" ─────────── */
+.pdv{margin-top:clamp(20px,3vh,34px);padding-top:18px;border-top:1px solid var(--linha)}
+.pdv-titulo{
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ardosia);margin-bottom:12px;
+}
+.pdv-grade{display:grid;gap:clamp(10px,1.2vw,16px);grid-template-columns:repeat(auto-fill,minmax(130px,170px))}
+@media (max-width:760px){.pdv-grade{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.peca{margin:0}
+/* os mockups vêm sobre fundo branco chapado: o ladrilho assume o mesmo branco
+   e a imagem entra inteira, sem corte e sem emenda visível na borda */
+.peca img{width:100%;display:block;aspect-ratio:4/3;object-fit:contain;background:#FFFFFF;border-radius:10px;padding:6px}
+.peca figcaption{
+  margin-top:8px;font-family:var(--f-corpo);font-weight:500;
+  font-size:var(--t-micro);line-height:var(--e-micro);letter-spacing:.12em;text-transform:uppercase;color:var(--ardosia);
+}
+
+/* ─────────── faixa de volumetria ─────────── */
+.faixa{width:100%;max-width:1180px;margin:clamp(24px,3.6vh,42px) auto 0;padding:0 var(--pad-x)}
+.faixa-titulo{
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ardosia);margin-bottom:14px;
+}
+.faixa-grade{display:grid;gap:clamp(10px,1.2vw,16px);grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.faixa-grade .chapa img,.faixa-grade .chapa .vazio{aspect-ratio:16/10;border-radius:10px}
+
+/* ─────────── investimento ─────────── */
+.valor-rotulo{
+  margin-top:clamp(18px,3vh,34px);
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.15em;text-transform:uppercase;color:var(--nevoa);
+}
+.valor{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:.2em;margin-top:8px;
+  font-family:var(--f-titulo);font-weight:800;line-height:1;letter-spacing:-.045em;
+  font-size:calc(var(--t-display) * 1.3);
+}
+.valor-moeda{font-size:.42em;font-weight:600;letter-spacing:-.01em;color:var(--nevoa)}
+.valor-nota{
+  margin-top:clamp(22px,3.4vh,38px);padding-top:20px;border-top:1px solid var(--linha);max-width:52ch;
+  font-weight:300;font-size:var(--t-sub);line-height:var(--e-sub);color:var(--nevoa);
+}
+@media (max-width:760px){.valor{font-size:calc(var(--t-titulo) * 1.15)}}
+
+/* ─────────── tela de obrigado ─────────── */
+.obrigado{border-bottom:none}
+.obrigado .interno{max-width:1000px}
+.agradecimento{
+  font-family:var(--f-titulo);font-weight:800;font-size:var(--t-titulo);
+  line-height:var(--e-display);letter-spacing:-.042em;
+}
+.agencia-linha{
+  font-family:var(--f-titulo);font-weight:700;font-size:var(--t-sub);
+  line-height:var(--e-sub);letter-spacing:-.028em;margin-top:10px;
+}
+.agencia{
+  display:grid;gap:clamp(20px,3vw,48px);margin-top:clamp(28px,4.4vh,52px);
+  padding-top:26px;border-top:1px solid var(--linha);
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+}
+.agencia > div > b{
+  display:block;font-family:var(--f-corpo);font-weight:500;font-size:var(--t-micro);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--laranja);margin-bottom:12px;
+}
+.agencia > div > span{display:block;color:var(--nevoa);font-size:var(--t-corpo);line-height:1.5}
+.agencia a{color:var(--ciano);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.agencia a:hover,.agencia a:focus-visible{border-bottom-color:var(--ciano)}
+.obrigado .assinatura{margin-top:clamp(30px,4.6vh,54px)}
+@media (min-width:820px){.obrigado .agradecimento{font-size:var(--t-display)}}
+
+/* ═══════════ cor: brilho ambiente por seção ═══════════
+   Cada seção acende um halo da paleta quando entra na tela. É o que tira
+   o cinza do fundo sem encher a tela de elemento. */
+.slide > *{position:relative;z-index:1}
+.slide::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(115% 85% at var(--bx,82%) var(--by,18%),
+             var(--brilho,transparent) 0%, transparent 60%);
+  opacity:0;transition:opacity 1.2s ease;
+}
+.slide.ativa::before{opacity:1}
+.capa::before{display:none}                 /* a capa já tem a fita */
+
+#conceito    {--brilho:rgba(0,183,234,.26); --bx:88%; --by:20%}
+#stand       {--brilho:rgba(224,48,128,.24); --bx:12%; --by:22%}
+#jornada     {--brilho:rgba(255,103,0,.24);  --bx:85%; --by:80%}
+#dentro      {--brilho:rgba(74,111,254,.24); --bx:15%; --by:18%}
+#planta      {--brilho:rgba(0,183,234,.26);  --bx:86%; --by:82%}
+#planta-baixa{--brilho:rgba(142,40,180,.22); --bx:16%; --by:20%}
+#atmosfera   {--brilho:rgba(142,40,180,.30); --bx:18%; --by:80%}
+#investimento{--brilho:rgba(255,103,0,.24);  --bx:84%; --by:78%}
+#obrigado    {--brilho:rgba(192,238,78,.18); --bx:78%; --by:78%}
+
+/* o fecho esquenta: dois focos quentes em vez de um */
+#fecho{
+  --brilho:rgba(224,48,128,.30); --bx:18%; --by:26%;
+  background:
+    radial-gradient(90% 70% at 96% 92%, rgba(255,103,0,.22) 0%, transparent 62%),
+    var(--preto);
+}
+
+/* ═══════════ ápice: o manifesto vira cor cheia ═══════════
+   O gradiente quente oficial da marca ocupa a tela inteira, com um véu
+   escuro por cima. Medido: texto branco fica entre 7,1:1 e 11,9:1 ao longo
+   de toda a rampa; medido no composto final, o pior ponto da tela da 6,17:1,
+   bem acima dos 4,5:1 exigidos para texto normal. */
+#manifesto{
+  --brilho:transparent;
+  --nevoa-quente:rgba(255,255,255,.84);
+  background:
+    linear-gradient(178deg, rgba(18,12,20,.46) 0%, rgba(18,12,20,.24) 46%, rgba(18,12,20,.38) 100%),
+    linear-gradient(148deg, #FF6700 0%, #E10B1B 44%, #8E28B4 100%);
+  border-bottom-color:rgba(255,255,255,.16);
+}
+#manifesto::before{display:none}
+#manifesto::after{background:linear-gradient(90deg,#FFB800,#fff 50%,#FFB800)}
+#manifesto .olho{color:rgba(255,255,255,.9)}
+#manifesto .olho::before{background:#fff}
+#manifesto .verso{color:#fff}
+#manifesto .miudo{color:var(--nevoa-quente)}
+#manifesto .miudo strong{color:#fff}
+#manifesto .frase{color:#fff}
+#manifesto .grifo{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#FFD79A}
+#manifesto .cadeia u{color:rgba(255,255,255,.66)}
+#manifesto .cadeia u:last-of-type{color:#fff}
+#manifesto .cadeia i{color:#FFD79A}
+#manifesto .tres{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.26)}
+#manifesto .tres > div{background:rgba(20,12,22,.42);color:#fff}
+#manifesto .tres > div:nth-child(1) > span{color:#FFD79A}
+#manifesto .tres > div:nth-child(2) > span{color:#FFC2D4}
+#manifesto .tres > div:nth-child(3) > span{color:#CDB6F5}
+
+/* fio de gradiente que corre no topo da seção quando ela entra */
+.slide::after{
+  content:"";position:absolute;top:0;left:0;height:2px;width:100%;z-index:2;
+  background:var(--g-marca);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform 1.1s cubic-bezier(.22,.7,.28,1);pointer-events:none;
+}
+.slide.ativa::after{transform:scaleX(1)}
+.capa::after{display:none}
+
+/* ═══════════ os seis pontos acendem conforme a linha passa ═══════════ */
+.eco .no,.eco text{
+  opacity:0;transition:opacity .45s ease var(--d,0s), transform .55s cubic-bezier(.2,1.4,.4,1) var(--d,0s);
+}
+.eco .no{transform:scale(.2);transform-box:fill-box;transform-origin:center}
+.eco text{transform:translateY(7px)}
+.eco.ligado .no{opacity:1;transform:scale(1)}
+.eco.ligado text{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){
+  .eco .no,.eco text{opacity:1;transform:none;transition:none}
+}
+
+/* ═══════════ trilho como mapa do gradiente ═══════════ */
+.trilho a{background:var(--c,#6D798D)}
+.trilho a:nth-of-type(1){--c:#FF6700}
+.trilho a:nth-of-type(2){--c:#F4480A}
+.trilho a:nth-of-type(3){--c:#E82514}
+.trilho a:nth-of-type(4){--c:#E10B1B}
+.trilho a:nth-of-type(5){--c:#E03080}
+.trilho a:nth-of-type(6){--c:#C22A9B}
+.trilho a:nth-of-type(7){--c:#8E28B4}
+.trilho a:nth-of-type(8){--c:#6B4AD6}
+.trilho a:nth-of-type(9){--c:#4A6FFE}
+.trilho a:nth-of-type(10){--c:#2E92F2}
+.trilho a:nth-of-type(11){--c:#00B7EA}
+.trilho a:nth-of-type(12){--c:#43C3EC}
+.trilho a:nth-of-type(13){--c:#C0EE4E}
+.trilho a[data-ativo]{background:var(--c,#FF6700);box-shadow:0 0 0 4px color-mix(in srgb, var(--c) 22%, transparent)}
+
+/* ═══════════ imagens ampliáveis ═══════════ */
+.ampliar{cursor:zoom-in;transition:transform .45s cubic-bezier(.2,.7,.3,1), filter .45s ease}
+.chapa,.peca{position:relative}
+.chapa .moldura,.peca .moldura{position:relative;display:block;overflow:hidden;border-radius:var(--raio)}
+.chapa .moldura::after,.peca .moldura::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:var(--g-marca);opacity:0;mix-blend-mode:overlay;transition:opacity .4s ease;
+}
+.moldura:hover .ampliar,.moldura:focus-within .ampliar{transform:scale(1.035)}
+.moldura:hover::after,.moldura:focus-within::after{opacity:.16}
+.ampliar:focus-visible{outline:3px solid var(--ciano);outline-offset:3px}
+.moldura .lupa-dica{
+  position:absolute;right:12px;bottom:12px;z-index:2;pointer-events:none;
+  width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(40,38,41,.62);backdrop-filter:blur(6px);
+  opacity:0;transform:translateY(6px);transition:opacity .3s ease, transform .3s ease;
+}
+.moldura:hover .lupa-dica,.moldura:focus-within .lupa-dica{opacity:1;transform:translateY(0)}
+.lupa-dica svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2.2}
+.faixa-grade .moldura{border-radius:10px}
+
+/* ═══════════ lupa em tela cheia ═══════════ */
+.lupa{
+  position:fixed;inset:0;z-index:100;display:none;
+  background:rgba(20,19,22,.94);backdrop-filter:blur(10px);
+}
+.lupa.aberta{display:grid;grid-template-rows:auto 1fr auto;animation:lupa-entra .28s ease}
+@keyframes lupa-entra{from{opacity:0}to{opacity:1}}
+.lupa-topo{display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,3vw,32px)}
+.lupa-conta{font-weight:500;font-size:var(--t-micro);letter-spacing:.14em;color:var(--nevoa);font-variant-numeric:tabular-nums}
+.lupa button{
+  appearance:none;border:1px solid var(--linha);background:transparent;color:var(--branco);
+  width:42px;height:42px;border-radius:50%;cursor:pointer;display:grid;place-items:center;
+  transition:background .25s ease, border-color .25s ease;
+}
+.lupa button:hover{background:var(--superficie-2);border-color:var(--linha-forte)}
+.lupa button:focus-visible{outline:2px solid var(--ciano);outline-offset:3px}
+.lupa button svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+/* A imagem vai dentro de uma caixa de dimensão definida e usa object-fit:
+   contain. Assim a foto inteira sempre aparece, com barra onde sobrar — um
+   max-height percentual aqui não resolve contra a trilha 1fr do grid e a
+   imagem acabava dimensionada só pela largura, cortando o rodapé. */
+.lupa-palco{position:relative;min-height:0;padding:0 clamp(12px,3vw,40px)}
+.lupa-quadro{position:relative;width:100%;height:100%;min-height:0}
+.lupa-quadro img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:contain;object-position:center;
+  animation:lupa-zoom .32s cubic-bezier(.2,.8,.3,1);
+}
+@keyframes lupa-zoom{from{transform:scale(.965);opacity:0}to{transform:scale(1);opacity:1}}
+.lupa-base{display:flex;justify-content:center;align-items:center;gap:18px;padding:16px clamp(16px,3vw,32px) 26px}
+.lupa-legenda{color:var(--nevoa);font-size:var(--t-corpo);text-align:center;max-width:62ch}
+@media (prefers-reduced-motion:reduce){
+  .lupa.aberta,.lupa-palco img{animation:none}
+  .ampliar{transition:none}
+}
+
+/* ═══════════ planta interativa ═══════════ */
+@property --fx{syntax:'<percentage>';inherits:true;initial-value:50%}
+@property --fy{syntax:'<percentage>';inherits:true;initial-value:50%}
+
+.dica-planta{
+  margin-top:14px;font-weight:500;font-size:var(--t-micro);letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ardosia);
+}
+.planta-viva{
+  display:grid;gap:clamp(20px,2.6vw,40px);margin-top:clamp(20px,3vh,34px);
+  grid-template-columns:1fr;--fx:50%;--fy:50%;
+  transition:--fx .65s cubic-bezier(.3,.8,.3,1), --fy .65s cubic-bezier(.3,.8,.3,1);
+}
+@media (min-width:960px){.planta-viva{grid-template-columns:1.48fr 1fr;align-items:center}}
+.planta-palco{position:relative}
+.planta-palco .moldura{border-radius:var(--raio)}
+
+/* holofote: escurece tudo menos a área da vez */
+.foco{
+  position:absolute;inset:0;pointer-events:none;border-radius:inherit;z-index:2;
+  background:radial-gradient(ellipse 17% 26% at var(--fx) var(--fy),
+             rgba(10,22,42,0) 0%, rgba(9,19,38,.5) 72%);   /* piso agora é escuro: .74 apagava o resto da planta */
+  opacity:0;transition:opacity .55s ease;
+}
+.planta-viva.guiando .foco{opacity:1}
+
+.marca-zona{
+  position:absolute;left:var(--x);top:var(--y);z-index:3;
+  width:clamp(28px,2.4vw,36px);aspect-ratio:1;border-radius:50%;
+  border:2px solid var(--c);background:rgba(12,26,48,.78);color:#fff;
+  display:grid;place-items:center;cursor:pointer;padding:0;
+  font-family:var(--f-titulo);font-weight:700;font-size:var(--t-micro);
+  transform:translate(-50%,-50%);
+  transition:transform .45s cubic-bezier(.2,1.3,.4,1), background .3s ease, box-shadow .4s ease;
+}
+.marca-zona:hover{transform:translate(-50%,-50%) scale(1.14)}
+.marca-zona:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.marca-zona.ativa{
+  background:var(--c);color:#0B1526;
+  transform:translate(-50%,-50%) scale(1.3);
+  box-shadow:0 0 0 6px color-mix(in srgb, var(--c) 26%, transparent),
+             0 10px 26px rgba(0,0,0,.45);
+}
+
+.zonas-lista{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
+.item-zona{
+  width:100%;text-align:left;background:none;border:0;cursor:pointer;
+  padding:13px 16px;border-radius:12px;border-left:2px solid transparent;
+  display:grid;grid-template-columns:auto 1fr;gap:2px 14px;
+  transition:background .32s ease, border-color .32s ease;
+  font-family:inherit;color:inherit;
+}
+.item-zona .n{
+  grid-row:1/span 2;font-family:var(--f-titulo);font-style:normal;font-weight:700;
+  font-size:var(--t-corpo);color:var(--ardosia);transition:color .3s ease;
+  font-variant-numeric:tabular-nums;line-height:1.35;
+}
+.item-zona .rot{
+  font-family:var(--f-titulo);font-weight:600;font-size:var(--t-corpo);
+  letter-spacing:-.015em;color:var(--branco);
+}
+.item-zona .txt{
+  color:var(--nevoa);font-size:var(--t-corpo);line-height:1.5;
+  max-height:0;opacity:0;overflow:hidden;
+  transition:max-height .45s cubic-bezier(.3,.8,.3,1), opacity .35s ease, margin-top .45s ease;
+}
+.item-zona.ativa{background:rgba(171,181,207,.07);border-left-color:var(--c)}
+.item-zona.ativa .n{color:var(--c)}
+.item-zona.ativa .txt{max-height:9em;opacity:1;margin-top:5px}
+.item-zona:focus-visible{outline:2px solid var(--ciano);outline-offset:2px}
+
+@media (prefers-reduced-motion:reduce){
+  .planta-viva,.marca-zona,.item-zona .txt{transition:none}
+}
+
+/* ═══════════ tela final no KV da 75 LAB ═══════════ */
+#obrigado{
+  background:#000;border-top:1px solid rgba(192,238,78,.22);
+  --brilho:rgba(192,238,78,.13);
+}
+#obrigado::after{background:linear-gradient(90deg,#C0EE4E,#01A290 55%,#C7B5F1)}
+.lab-assinatura{width:clamp(190px,22vw,300px);display:block}
+.lab-marca{color:#C0EE4E}
+.obrigado .agradecimento{color:#fff}
+.obrigado .agencia{border-top-color:rgba(192,238,78,.24)}
+.obrigado .agencia > div > b{color:#C0EE4E}
+.obrigado .agencia > div > span{color:#CFCFC6}
+.obrigado .agencia a{color:#C0EE4E}
+.obrigado .agencia a:hover,.obrigado .agencia a:focus-visible{border-bottom-color:#C0EE4E}
+.obrigado .olho{color:#C0EE4E}
+.obrigado .olho::before{background:linear-gradient(90deg,#C0EE4E,#01A290)}
+.lab-rodape{
+  display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;
+  margin-top:clamp(28px,4.4vh,54px);padding-top:22px;
+  border-top:1px solid rgba(192,238,78,.18);
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.13em;text-transform:uppercase;
+  color:#8C8C84;
+}
+.lab-rodape .projeto{color:#CFCFC6}
+/* traço de marca-texto da 75 LAB atrás do "Obrigado" */
+.risco{position:relative;display:inline-block}
+.risco::after{
+  content:"";position:absolute;left:-2%;right:-2%;bottom:.1em;height:.34em;z-index:-1;
+  background:#C0EE4E;opacity:.9;border-radius:2px;
+  transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .8s cubic-bezier(.22,.7,.28,1) .25s;
+}
+.slide.ativa .risco::after{transform:scaleX(1)}
+
+/* ═══════════ planta baixa em tela cheia ═══════════ */
+.planta-limpa .chapa img{
+  max-height:62svh;object-fit:contain;background:var(--navy);
+  border-radius:var(--raio);
+}
+.planta-limpa .moldura{background:var(--navy)}
+
+/* números institucionais na tela final */
+.lab-numeros{
+  margin-top:14px;font-weight:500;font-size:var(--t-micro);letter-spacing:.11em;
+  text-transform:uppercase;color:#8C8C84;
+}
+.obrigado .agencia > div > span{line-height:1.55}
+/* ═══════════ navegação 3D ═══════════
+   O modelo tem 31 MB e mora em projetos.75lab.com.br. A seção mostra uma
+   capa com render embutido; o visualizador só carrega no clique, então o
+   deck continua abrindo leve e offline. */
+#tres-d{--brilho:rgba(74,111,254,.26); --bx:84%; --by:18%}
+.tresd{display:grid;gap:clamp(18px,2.4vw,34px);margin-top:clamp(20px,3vh,34px);grid-template-columns:1fr}
+/* align-items:center, nao stretch: esticado ate a altura da coluna lateral, o
+   aspect-ratio recalculava a LARGURA a partir da altura e o palco invadia a coluna */
+@media (min-width:960px){.tresd{grid-template-columns:minmax(0,1.72fr) minmax(0,1fr);align-items:center}}
+.tresd-palco{
+  position:relative;width:100%;height:auto;aspect-ratio:16/9;align-self:center;
+  border-radius:var(--raio);overflow:hidden;
+  background:#0B1526;box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+.tresd-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.3,1)}
+.tresd-palco::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:linear-gradient(180deg,rgba(11,21,38,0) 35%,rgba(11,21,38,.8) 100%);
+}
+.tresd-palco:hover .tresd-poster{transform:scale(1.035)}
+.tresd-entrar{
+  position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);z-index:2;
+  display:flex;align-items:center;gap:14px;padding:12px 24px 12px 12px;border:0;border-radius:999px;
+  cursor:pointer;color:#fff;font-family:inherit;
+  background:linear-gradient(100deg,#FF6700 0%,#E10B1B 48%,#8E28B4 100%);
+  box-shadow:0 16px 44px rgba(225,11,27,.42);
+  transition:transform .35s cubic-bezier(.2,1.3,.4,1), box-shadow .35s ease;
+}
+.tresd-entrar:hover{transform:translate(-50%,-50%) scale(1.04);box-shadow:0 20px 54px rgba(225,11,27,.55)}
+.tresd-entrar:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.tresd-play{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;flex:none}
+.tresd-play svg{width:24px;height:24px;fill:none;stroke:#fff;stroke-width:1.7;stroke-linejoin:round}
+.tresd-rotulo{display:flex;flex-direction:column;text-align:left;gap:2px}
+.tresd-rotulo b{font-family:var(--f-titulo);font-weight:700;font-size:var(--t-corpo);letter-spacing:-.01em}
+.tresd-rotulo small{font-size:var(--t-micro);letter-spacing:.04em;opacity:.86;white-space:nowrap}
+.tresd-medidas{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;list-style:none;margin:0;
+  display:flex;flex-wrap:wrap;gap:8px;padding:clamp(12px,1.6vw,18px);
+}
+.tresd-medidas li{
+  padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.13);backdrop-filter:blur(6px);
+  font-weight:500;font-size:var(--t-micro);letter-spacing:.1em;text-transform:uppercase;color:#fff;
+}
+.tresd-medidas b{font-family:var(--f-titulo);font-weight:700;letter-spacing:0;margin-right:3px;text-transform:none}  /* metro é m, nunca M */
+.tresd-palco iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3;background:#0B1526}
+.tresd-palco.carregado .tresd-entrar,.tresd-palco.carregado .tresd-medidas{display:none}
+
+.tresd-lado{display:flex;flex-direction:column;gap:10px}
+.tresd-dica{padding:4px 2px 8px}
+.tresd-dica b,.tresd-qr span b{
+  display:block;margin-bottom:5px;font-weight:500;font-size:var(--t-micro);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--ciano);
+}
+.tresd-dica span{color:var(--nevoa)}
+.tresd-acao{
+  display:grid;grid-template-columns:1fr auto;gap:3px 14px;padding:14px 16px;border-radius:12px;
+  background:rgba(171,181,207,.07);border:1px solid var(--linha);color:inherit;text-decoration:none;
+  transition:background .3s ease, border-color .3s ease;
+}
+.tresd-acao:hover{background:rgba(171,181,207,.13);border-color:var(--linha-forte)}
+.tresd-acao:focus-visible{outline:2px solid var(--ciano);outline-offset:2px}
+.tresd-acao b{font-family:var(--f-titulo);font-weight:600;letter-spacing:-.01em;color:#fff}
+.tresd-acao span{grid-column:1;color:var(--nevoa);line-height:1.45}
+.tresd-acao i{grid-row:1/span 2;grid-column:2;align-self:center;font-style:normal;font-size:var(--t-sub);color:var(--ciano)}
+.tresd-qr{
+  display:flex;gap:14px;align-items:center;margin-top:auto;padding:14px;border-radius:12px;
+  background:rgba(171,181,207,.07);border:1px solid var(--linha);
+}
+.tresd-qr .qr{width:92px;height:92px;flex:none;border-radius:8px}
+.tresd-qr span{color:var(--nevoa);line-height:1.45}
+
+/* ═══════════ modo apresentação: um slide por tela ═══════════
+   Na largura em que o trilho aparece o deck para de rolar e passa slide a
+   slide, como as outras apresentações da 75 LAB: o novo entra numa cortina
+   lateral e o que sai cresce e desfoca. Teclado, roda do mouse (um slide
+   por gesto), swipe, trilho e setas. Abaixo disso a rolagem continua, que
+   é como o deck se lê no celular. */
+.controles{display:none}
+html.deck{scroll-behavior:auto}
+html.deck body{height:100svh;overflow:hidden}
+html.deck .slide{
+  position:fixed;top:0;right:0;bottom:0;left:var(--rail);
+  min-height:0;border-bottom:none;background-color:var(--preto);
+  justify-content:safe center;opacity:0;visibility:hidden;
+}
+html.deck .fundo-navy{background-color:var(--navy)}
+html.deck .slide.atual,html.deck .slide.saindo{opacity:1;visibility:visible}
+html.deck .slide.atual{z-index:2}
+html.deck .slide.saindo{z-index:1;transform:scale(1.045);filter:blur(5px);transition:transform .9s ease,filter .9s ease}
+html.deck .slide.atual.vai{animation:cortina-vai 1s cubic-bezier(.7,0,.2,1) both}
+html.deck .slide.atual.volta{animation:cortina-volta 1s cubic-bezier(.7,0,.2,1) both}
+@keyframes cortina-vai{from{clip-path:inset(0 0 0 100%)}to{clip-path:inset(0 0 0 0)}}
+@keyframes cortina-volta{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+html.deck .progresso i{transition:width .8s cubic-bezier(.7,0,.2,1)}
+
+/* cada slide cabe numa tela: a foto do stand ocupa a altura que sobrar,
+   as galerias abrem em uma fila e o kit em duas */
+html.deck .hero .chapa{flex:1 1 0;min-height:0}
+html.deck .hero .chapa .moldura{height:100%}
+html.deck .hero .chapa img{height:100%;max-height:none}
+html.deck .atos .chapa img{aspect-ratio:16/9}
+html.deck #dentro .galeria{grid-template-columns:repeat(3,minmax(0,1fr))}
+html.deck #dentro .galeria .chapa img{aspect-ratio:16/9}
+
+html.deck .controles{
+  display:flex;gap:10px;position:fixed;z-index:55;
+  right:clamp(18px,2.2vw,32px);bottom:clamp(16px,2.4vh,28px);
+}
+.controles button{
+  appearance:none;width:42px;height:42px;border-radius:50%;padding:0;cursor:pointer;
+  display:grid;place-items:center;color:var(--branco);
+  border:1px solid var(--linha-forte);background:rgba(40,38,41,.55);backdrop-filter:blur(6px);
+  transition:background .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.controles button:hover{background:var(--superficie-2);border-color:var(--nevoa)}
+.controles button:focus-visible{outline:2px solid var(--ciano);outline-offset:3px}
+.controles button:disabled{opacity:.28;cursor:default;background:transparent;border-color:var(--linha)}
+.controles svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+@media (prefers-reduced-motion:reduce){
+  html.deck .slide.saindo{transform:none;filter:none;transition:none}
+  html.deck .slide.atual.vai,html.deck .slide.atual.volta{animation:none}
+  html.deck .progresso i{transition:none}
+}
+
+
+/* ═══════════ brindes ═══════════ */
+.grade-brindes{
+  display:grid;gap:clamp(14px,1.8vw,24px);margin-top:clamp(22px,3.4vh,38px);
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+}
+@media (max-width:760px){.grade-brindes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* mockups sobre branco chapado entram inteiros; as fotos vestidas preenchem o quadro */
+.peca.brinde img{aspect-ratio:1/1;padding:10px;border-radius:var(--raio)}
+.grade-brindes.retrato .peca.brinde img{aspect-ratio:4/5}
+.peca.brinde.foto img{object-fit:cover;padding:0;background:var(--superficie)}
+.peca.brinde figcaption{margin-top:12px;color:var(--nevoa);letter-spacing:.14em}
+
+.frase-kit{
+  font-family:var(--f-titulo);font-weight:700;letter-spacing:-.03em;
+  font-size:var(--t-titulo);line-height:var(--e-titulo);max-width:26ch;
+}
+.kit-faixa{display:grid;gap:10px;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:clamp(24px,3.6vh,40px)}
+@media (max-width:760px){.kit-faixa{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.kit-faixa img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#FFFFFF;border-radius:10px;padding:6px}
+.kit-faixa img.foto{object-fit:cover;padding:0}
+.kit-rodape{
+  display:flex;flex-wrap:wrap;align-items:center;gap:clamp(18px,3vw,40px);
+  margin-top:clamp(24px,3.6vh,40px);padding-top:22px;border-top:1px solid var(--linha);
+}
+.kit-rodape .lab-assinatura{width:clamp(110px,10vw,150px)}
+.kit-rodape .volta{
+  display:inline-block;margin-top:8px;color:var(--ciano);text-decoration:none;font-weight:500;
+  border-bottom:1px solid transparent;transition:border-color .2s;
+}
+.kit-rodape .volta:hover,.kit-rodape .volta:focus-visible{border-bottom-color:var(--ciano)}
+
+#camisetas    {--brilho:rgba(255,103,0,.24);  --bx:85%; --by:18%}
+#bones-sacolas{--brilho:rgba(142,40,180,.30); --bx:14%; --by:82%}
+#papelaria    {--brilho:rgba(0,183,234,.24);  --bx:86%; --by:80%}
+#kit{
+  --brilho:rgba(224,48,128,.28); --bx:18%; --by:24%;
+  background:radial-gradient(90% 70% at 96% 92%, rgba(255,103,0,.20) 0%, transparent 62%), var(--preto);
+}
+/* cinco pontos: o trilho percorre o gradiente inteiro */
+.trilho a:nth-of-type(2){--c:#E10B1B}
+.trilho a:nth-of-type(3){--c:#8E28B4}
+.trilho a:nth-of-type(4){--c:#4A6FFE}
+.trilho a:nth-of-type(5){--c:#00B7EA}
+</style>
+</head>
+<body>
+<script>
+document.documentElement.classList.add('js');
+if(matchMedia('(min-width:1080px)').matches) document.documentElement.classList.add('deck');
+</script>
+
+<div class="progresso"><i id="barra"></i></div>
+
+<nav class="trilho" aria-label="Navegação da apresentação">
+  <span class="marca"><img src="assets/img/01-ngv.png" alt="NGV"></span>
+  <a href="#capa"          data-nome="Abertura"></a>
+  <a href="#camisetas"     data-nome="Camisetas"></a>
+  <a href="#bones-sacolas" data-nome="Bonés e sacolas"></a>
+  <a href="#papelaria"     data-nome="Moleskines, canetas e garrafas"></a>
+  <a href="#kit"           data-nome="O kit"></a>
+  <span class="pag" id="contador">01/05</span>
+</nav>
+
+<div class="controles">
+  <button type="button" class="ctl-ant" aria-label="Slide anterior"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="ctl-prox" aria-label="Próximo slide"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gm" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6700"/><stop offset="26%" stop-color="#E10B1B"/>
+      <stop offset="56%" stop-color="#8E28B4"/><stop offset="80%" stop-color="#4A6FFE"/>
+      <stop offset="100%" stop-color="#00B7EA"/>
+    </linearGradient>
+    <linearGradient id="gh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6700"/><stop offset="24%" stop-color="#E10B1B"/>
+      <stop offset="52%" stop-color="#8E28B4"/><stop offset="78%" stop-color="#4A6FFE"/>
+      <stop offset="100%" stop-color="#00B7EA"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- ═══════ 01 · CAPA ═══════ -->
+<section class="slide capa" id="capa">
+  <div class="fita" aria-hidden="true">
+    <svg viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMax slice">
+      <path id="fita-capa" d="M -219 1105L-206 1104L-194 1104L-181 1103L-168 1102L-156 1102L-143 1101L-130 1101L-118 1100L-105 1100L-92 1099L-79 1099L-66 1098L-54 1098L-41 1097L-28 1097L-15 1096L-2 1096L10 1095L23 1094L36 1094L48 1093L61 1092L74 1092L86 1091L99 1090L111 1089L123 1088L136 1087L148 1085L160 1084L172 1083L184 1081L196 1080L209 1078L221 1077L233 1075L245 1073L257 1071L269 1070L281 1068L293 1066L305 1064L317 1062L329 1060L341 1057L352 1055L364 1053L375 1051L387 1049L398 1046L409 1044L421 1042L432 1039L443 1037L453 1035L464 1032L474 1030L485 1028L495 1026L505 1023L515 1021L524 1019L534 1017L543 1014L552 1012L561 1010L569 1008L577 1006L586 1004L594 1002L602 1000L610 998L617 996L625 993L632 991L640 989L647 987L655 985L662 983L669 980L676 978L684 975L691 973L698 970L705 968L713 965L720 962L727 959L735 957L742 953L750 950L758 947L765 944L773 940L781 937L789 934L797 931L804 928L812 925L820 922L828 919L836 916L845 913L853 910L861 907L869 903L877 900L885 896L894 893L902 889L910 885L918 880L927 876L935 871L943 866L951 861L960 855L968 849L976 843L984 836L992 829L1000 822L1008 814L1016 806L1024 797L1032 788L1039 778L1047 768L1054 757L1062 746L1069 735L1076 723L1083 711L1091 699L1098 686L1105 673L1112 660L1119 647L1126 634L1133 620L1141 607L1148 594L1155 580L1163 567L1170 553L1178 540L1186 527L1193 514L1201 502L1209 489L1218 477L1226 465L1235 454L1243 443L1252 432L1261 422L1271 411L1280 401L1290 391L1300 381L1310 372L1320 362L1330 353L1340 344L1351 334L1362 325L1372 316L1383 307L1394 299L1405 290L1416 281L1427 272L1438 264L1449 255L1460 246L1471 238L1482 229L1493 221L1504 212L1515 203L1526 195L1537 186L1548 177L1559 168L1570 159L1580 150L1580 150L1569 159L1558 167L1547 176L1536 185L1525 194L1514 202L1503 211L1492 219L1481 228L1470 236L1459 245L1448 253L1436 262L1425 271L1414 279L1403 288L1392 296L1381 305L1370 314L1359 323L1349 332L1338 341L1327 350L1317 359L1307 369L1297 378L1286 388L1277 398L1267 408L1257 418L1248 428L1238 439L1229 450L1221 461L1212 473L1203 485L1195 497L1186 510L1178 523L1170 536L1162 549L1155 562L1147 575L1139 589L1131 602L1124 615L1116 628L1109 641L1102 654L1094 667L1087 680L1079 692L1072 704L1065 716L1057 727L1050 738L1042 749L1035 759L1027 768L1019 778L1012 786L1004 794L996 802L988 809L980 815L972 822L964 828L956 833L948 839L940 844L933 848L925 853L917 857L909 861L901 864L892 868L884 871L876 875L868 878L860 881L852 883L844 886L836 889L828 892L820 894L812 897L803 899L795 902L787 905L779 907L771 910L763 913L755 916L747 919L739 922L731 925L724 928L717 930L709 933L702 935L695 937L688 939L681 942L674 944L666 946L659 948L652 950L645 952L638 953L631 955L623 957L616 959L608 961L601 962L593 964L585 966L577 968L569 970L561 972L552 973L543 975L534 977L525 979L516 981L506 983L496 985L486 988L476 990L466 992L456 994L445 996L434 998L424 1001L413 1003L402 1005L390 1007L379 1009L368 1012L356 1014L345 1016L333 1018L322 1020L310 1022L298 1024L286 1026L275 1028L263 1030L251 1032L239 1034L227 1035L215 1037L203 1039L191 1040L180 1042L168 1043L156 1044L144 1046L132 1047L120 1048L108 1049L96 1050L83 1051L71 1052L58 1052L46 1053L33 1054L21 1055L8 1055L-4 1056L-17 1056L-30 1057L-42 1057L-55 1058L-68 1058L-81 1059L-94 1059L-106 1060L-119 1060L-132 1061L-145 1061L-158 1062L-170 1062L-183 1063L-196 1064L-208 1064L-221 1065A20 20 0 0 1 -221 1065Z" fill="url(#gm)"/>
+      <path id="fita-capa2" d="M -220 1193L-203 1193L-186 1192L-169 1191L-152 1190L-135 1190L-118 1189L-101 1189L-84 1188L-67 1187L-49 1187L-32 1186L-15 1185L2 1185L19 1184L36 1183L53 1183L69 1182L86 1181L103 1180L119 1179L136 1177L152 1176L168 1175L184 1173L200 1171L216 1170L232 1168L248 1166L264 1164L280 1161L295 1159L311 1157L327 1154L342 1152L358 1149L373 1146L389 1144L404 1141L419 1138L434 1135L448 1132L463 1130L477 1127L491 1124L505 1121L519 1118L532 1115L545 1112L558 1110L571 1107L583 1104L595 1102L606 1099L618 1097L628 1094L639 1091L650 1089L660 1087L670 1084L680 1082L689 1079L699 1076L709 1074L718 1071L727 1068L736 1066L746 1063L755 1060L764 1057L773 1054L783 1050L792 1047L801 1044L811 1040L821 1036L831 1032L840 1029L850 1025L860 1022L869 1019L879 1015L889 1012L899 1009L908 1005L918 1002L927 998L937 994L947 990L956 986L966 982L976 977L985 972L995 966L1004 960L1014 953L1023 946L1033 939L1042 931L1052 922L1061 913L1070 903L1080 892L1089 880L1098 868L1107 855L1116 841L1124 827L1133 813L1142 798L1151 783L1160 767L1168 751L1177 736L1186 720L1195 704L1204 688L1213 672L1222 656L1232 641L1241 626L1251 611L1260 596L1270 583L1280 569L1291 556L1301 544L1312 532L1322 520L1333 509L1345 497L1356 486L1367 475L1379 465L1390 454L1402 443L1414 433L1426 423L1438 413L1449 403L1461 392L1473 382L1485 372L1497 362L1509 352L1521 342L1533 332L1545 322L1557 311L1569 301L1580 290L1580 290L1568 300L1556 311L1545 321L1533 331L1521 341L1509 352L1497 362L1485 372L1473 382L1461 392L1449 402L1437 412L1425 422L1413 432L1401 443L1390 453L1378 464L1366 475L1355 486L1344 497L1333 508L1322 519L1311 531L1300 543L1289 556L1279 568L1269 582L1259 596L1249 610L1240 625L1230 640L1221 655L1212 671L1202 687L1193 703L1184 719L1175 735L1167 750L1158 766L1149 782L1140 797L1131 812L1122 826L1114 840L1105 854L1096 867L1087 879L1078 890L1068 901L1059 911L1050 920L1040 929L1031 937L1021 944L1012 951L1002 957L993 963L983 969L974 974L964 979L955 983L945 987L936 991L926 995L917 998L907 1002L897 1005L888 1008L878 1012L868 1015L858 1018L849 1021L839 1025L829 1028L819 1032L809 1036L800 1039L790 1043L781 1046L772 1049L763 1052L753 1055L744 1058L735 1061L726 1064L716 1066L707 1069L698 1071L688 1074L678 1076L669 1079L659 1081L648 1084L638 1086L627 1088L616 1091L605 1093L593 1096L582 1098L569 1101L557 1104L544 1106L531 1109L517 1112L504 1115L490 1118L476 1120L462 1123L447 1126L432 1129L418 1132L403 1134L387 1137L372 1140L357 1142L341 1145L326 1148L310 1150L294 1152L279 1155L263 1157L247 1159L231 1161L215 1163L200 1165L184 1166L168 1168L152 1169L135 1170L119 1172L102 1173L86 1174L69 1175L52 1176L35 1176L18 1177L2 1178L-16 1178L-33 1179L-50 1180L-67 1180L-84 1181L-101 1182L-118 1182L-135 1183L-152 1183L-169 1184L-186 1185L-203 1186L-220 1187A4 4 0 0 1 -220 1187Z" fill="url(#gm)" opacity=".55"/>
+    </svg>
+  </div>
+  <div class="interno">
+    <img class="lockup rev" src="assets/img/02-ngv-ecossistema.png" alt="NGV Ecossistema" width="900" height="365">
+    <div class="capa-base">
+      <p class="olho rev d1">Abradilan Conexão Farma · Stand NGV Ecossistema</p>
+      <h1 class="rev d2">A marca continua<br><span class="grifo">depois da feira</span></h1>
+      <p class="lede rev d3">O que o visitante leva na mão prolonga a experiência do stand.</p>
+      <div class="fio rev d4"></div>
+      <div class="rodape rev d4">
+        <span>Brindes do stand</span>
+        <span>Complemento da apresentação do projeto</span>
+        <span>75 LAB</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 02 · CAMISETAS ═══════ -->
+<section class="slide" id="camisetas">
+  <div class="interno">
+    <p class="olho rev">01 · Camisetas</p>
+    <h2 class="rev d1">Vestir o ecossistema</h2>
+    <p class="texto rev d2" style="margin-top:18px">Cada peça usa o mesmo gradiente e a mesma curva da arquitetura — o ecossistema segue reconhecível fora do espaço.</p>
+    <div class="grade-brindes retrato">
+      <figure class="peca brinde foto rev d2"><div class="moldura"><img class="ampliar" src="assets/img/13-camiseta-ngv-branca-vestida.jpg" alt="Camiseta NGV branca vestida" loading="lazy" decoding="async" width="1000" height="747"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Camiseta · versão clara</figcaption></figure>
+      <figure class="peca brinde foto rev d3"><div class="moldura"><img class="ampliar" src="assets/img/14-camiseta-ngv-preta-vestida.jpg" alt="Camiseta NGV preta vestida" loading="lazy" decoding="async" width="1000" height="747"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Camiseta · versão escura</figcaption></figure>
+      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/15-camiseta-clara-frente-e-costas.webp" alt="Camiseta clara, frente e costas" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Clara · frente e costas</figcaption></figure>
+      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/16-camiseta-escura-frente-e-costas.webp" alt="Camiseta escura, frente e costas" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Escura · frente e costas</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 03 · BONÉS E SACOLAS ═══════ -->
+<section class="slide fundo-navy" id="bones-sacolas">
+  <div class="interno">
+    <p class="olho rev">02 · Bonés e sacolas</p>
+    <h2 class="rev d1">Para levar<br>a marca junto</h2>
+    <p class="texto rev d2" style="margin-top:18px">Nas versões clara e escura, com a curva e o gradiente da NGV.</p>
+    <div class="grade-brindes">
+      <figure class="peca brinde rev d2"><div class="moldura"><img class="ampliar" src="assets/img/17-bone-ngv-branco.webp" alt="Boné NGV branco" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Boné claro</figcaption></figure>
+      <figure class="peca brinde rev d3"><div class="moldura"><img class="ampliar" src="assets/img/18-bone-ngv-preto.webp" alt="Boné NGV preto" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Boné escuro</figcaption></figure>
+      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola NGV branca" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Sacola clara</figcaption></figure>
+      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/23-sacola-ngv-preta.webp" alt="Sacola NGV preta" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Sacola escura</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 04 · MOLESKINES, CANETAS E GARRAFAS ═══════ -->
+<section class="slide" id="papelaria">
+  <div class="interno">
+    <p class="olho rev">03 · Moleskines, canetas e garrafas</p>
+    <h2 class="rev d1">Da mesa de trabalho<br>ao dia a dia</h2>
+    <p class="texto rev d2" style="margin-top:18px">Peças que ficam por perto depois da visita, com a mesma linguagem do stand.</p>
+    <div class="grade-brindes">
+      <figure class="peca brinde rev d2"><div class="moldura"><img class="ampliar" src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine NGV branco" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Moleskine claro</figcaption></figure>
+      <figure class="peca brinde rev d3"><div class="moldura"><img class="ampliar" src="assets/img/20-moleskine-ngv-preto.webp" alt="Moleskine NGV preto" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Moleskine escuro</figcaption></figure>
+      <figure class="peca brinde rev d4"><div class="moldura"><img class="ampliar" src="assets/img/21-canetas-ngv.webp" alt="Canetas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Canetas</figcaption></figure>
+      <figure class="peca brinde rev d5"><div class="moldura"><img class="ampliar" src="assets/img/22-garrafas-ngv.webp" alt="Garrafas NGV" loading="lazy" decoding="async" width="700" height="525"><span class="lupa-dica" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M11 8v6M8 11h6"/></svg></span></div><figcaption>Garrafas</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ 05 · O KIT ═══════ -->
+<section class="slide fecho" id="kit">
+  <div class="interno">
+    <p class="olho rev">04 · O kit</p>
+    <p class="frase-kit rev d1">A mesma curva, o mesmo gradiente.<br><span class="grifo">O ecossistema continua reconhecível</span> fora do stand.</p>
+    <div class="kit-faixa rev d2" aria-label="Todas as peças do kit">
+      <img src="assets/img/13-camiseta-ngv-branca-vestida.jpg" alt="Camiseta clara" class="foto" loading="lazy" decoding="async" width="1000" height="747">
+      <img src="assets/img/14-camiseta-ngv-preta-vestida.jpg" alt="Camiseta escura" class="foto" loading="lazy" decoding="async" width="1000" height="747">
+      <img src="assets/img/17-bone-ngv-branco.webp" alt="Boné claro" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/18-bone-ngv-preto.webp" alt="Boné escuro" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/24-sacola-ngv-branca.webp" alt="Sacola clara" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/23-sacola-ngv-preta.webp" alt="Sacola escura" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/19-moleskine-ngv-branco.webp" alt="Moleskine claro" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/20-moleskine-ngv-preto.webp" alt="Moleskine escuro" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/21-canetas-ngv.webp" alt="Canetas" loading="lazy" decoding="async" width="700" height="525">
+      <img src="assets/img/22-garrafas-ngv.webp" alt="Garrafas" loading="lazy" decoding="async" width="700" height="525">
+    </div>
+    <div class="kit-rodape rev d3">
+      <img class="lab-assinatura" src="assets/img/25-75-lab-ideia-boa-e-a-que-acontece.png" alt="75 LAB — ideia boa é a que acontece" width="720" height="657">
+      <div>
+        <p class="nota">Stand NGV Ecossistema · Abradilan Conexão Farma</p>
+        <a class="volta" href="https://projetos.75lab.com.br/75lab-ngv-ecossistema/">Ver a apresentação do stand <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════ lupa ═══════ -->
+<div class="lupa" id="lupa" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <div class="lupa-topo">
+    <span class="lupa-conta" id="lupa-conta">01/01</span>
+    <button class="lupa-fechar" aria-label="Fechar (Esc)">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="lupa-palco"><div class="lupa-quadro"><img id="lupa-img" alt=""></div></div>
+  <div class="lupa-base">
+    <button class="lupa-ant" aria-label="Imagem anterior">
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <p class="lupa-legenda" id="lupa-legenda"></p>
+    <button class="lupa-prox" aria-label="Próxima imagem">
+      <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var raiz    = document.documentElement;
+  var secoes  = [].slice.call(document.querySelectorAll('.slide'));
+  var pontos  = [].slice.call(document.querySelectorAll('.trilho a'));
+  var barra   = document.getElementById('barra');
+  var contador= document.getElementById('contador');
+  var btAnt   = document.querySelector('.ctl-ant');
+  var btProx  = document.querySelector('.ctl-prox');
+  var reduzido= matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var temIO   = 'IntersectionObserver' in window;
+  var reveladores = [].slice.call(document.querySelectorAll('.rev'));
+  var N = secoes.length;
+
+  /* ── modo: apresentação (um slide por tela) ou rolagem ─────────────
+     Mesmo corte do trilho. A classe já vem do script do topo do <body>,
+     para a página não piscar no layout de rolagem antes de virar deck. */
+  var telaLarga = matchMedia('(min-width:1080px)');
+  var deck = telaLarga.matches;
+  raiz.classList.toggle('deck', deck);
+  var atual = -1;
+
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function cada(lista, fn){ [].forEach.call(lista, fn); }
+
+  /* ── a forma curva se desenha da ponta grossa para a fina ──────────
+     O observer precisa olhar para um elemento HTML: um <path> de SVG
+     não tem caixa de layout e o IntersectionObserver nunca dispara nele.
+     No deck quem dispara é a entrada do slide, e o traço refaz a cada volta. */
+  var tracos = [];
+  function desenhar(alvo, container, segundos, aoTerminar, aoZerar){
+    var el = document.getElementById(alvo);
+    if(!el) return;
+    var t = {el: el, caixa: container ? document.querySelector(container) : null,
+             s: segundos, fim: aoTerminar, zera: aoZerar, feito: false};
+    tracos.push(t);
+    if(reduzido){ t.feito = true; if(aoTerminar) aoTerminar(); return; }
+    el.style.clipPath = 'inset(0 100% 0 0)';
+    if(deck) return;
+    if(!t.caixa){ setTimeout(function(){ tracar(t); }, 220); return; }
+    if(temIO){
+      new IntersectionObserver(function(es, o){
+        es.forEach(function(e){ if(e.isIntersecting && !deck){ tracar(t); o.disconnect(); } });
+      }, {threshold:.25}).observe(t.caixa);
+    }
+  }
+  function tracar(t){
+    if(t.feito) return;
+    t.feito = true;
+    /* força o reflow para o estado inicial ser commitado antes da transição.
+       Um requestAnimationFrame aqui travaria em documento não renderizado. */
+    void t.el.getBoundingClientRect();
+    t.el.style.transition = 'clip-path ' + t.s + 's cubic-bezier(.22,.7,.28,1)';
+    t.el.style.clipPath = 'inset(0 0 0 0)';
+    if(t.fim) t.fim();
+  }
+  function zerarTraco(t){
+    if(reduzido) return;
+    t.el.style.transition = 'none';
+    t.el.style.clipPath = 'inset(0 100% 0 0)';
+    t.feito = false;
+    if(t.zera) t.zera();
+  }
+  function tracosDe(s){
+    return tracos.filter(function(t){ return s.contains(t.el) || (t.caixa && s.contains(t.caixa)); });
+  }
+
+  var eco = document.querySelector('.eco');
+  desenhar('fita-capa', null, 1.6);
+  desenhar('fita-capa2', null, 1.9);
+  /* os seis pontos acendem conforme a linha passa por eles (delay no --d de cada um) */
+  desenhar('fita-eco', '.eco', 1.8,
+    function(){ if(eco) eco.classList.add('ligado'); },
+    function(){ if(eco) eco.classList.remove('ligado'); });
+
+  /* Rede de segurança da rolagem: se o IntersectionObserver não rodar — aba
+     em segundo plano, renderização suspensa, navegador antigo — a geometria
+     do scroll assume e nada fica preso invisível. */
+  function naTela(el, folga){
+    var r = el.getBoundingClientRect();
+    return r.top < innerHeight - (folga || 0) && r.bottom > 0;
+  }
+  function conferirPendentes(){
+    if(deck) return;
+    tracos.forEach(function(t){ if(!t.feito && t.caixa && naTela(t.caixa, 60)) tracar(t); });
+    reveladores.forEach(function(el){
+      if(!el.classList.contains('dentro') && naTela(el, 40)) el.classList.add('dentro');
+    });
+    secoes.forEach(function(s){ s.classList.toggle('ativa', naTela(s, 0)); });
+  }
+
+  /* ── revelação por scroll ────────────────────────────────────────── */
+  if(!temIO){
+    if(!deck){
+      reveladores.forEach(function(el){ el.classList.add('dentro'); });
+      secoes.forEach(function(s){ s.classList.add('ativa'); });
+    }
+  } else {
+    var obs = new IntersectionObserver(function(es){
+      if(deck) return;
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('dentro'); obs.unobserve(e.target); } });
+    }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+    reveladores.forEach(function(el){ obs.observe(el); });
+    setTimeout(function(){
+      if(deck) return;
+      reveladores.forEach(function(el){ if(el.getBoundingClientRect().top < 0) el.classList.add('dentro'); });
+    }, 400);
+
+    /* o brilho de cor de cada seção acende quando ela entra e apaga ao sair */
+    var obsSecao = new IntersectionObserver(function(es){
+      if(deck) return;
+      es.forEach(function(e){ e.target.classList.toggle('ativa', e.isIntersecting); });
+    }, {threshold:.18});
+    secoes.forEach(function(s){ obsSecao.observe(s); });
+  }
+
+  /* ── progresso e seção corrente ──────────────────────────────────── */
+  function marcar(i){
+    pontos.forEach(function(p,k){ k===i ? p.setAttribute('data-ativo','') : p.removeAttribute('data-ativo'); });
+    contador.textContent = pad(i+1) + '/' + pad(N);
+  }
+  function indiceRolagem(){
+    var meio = scrollY + innerHeight*0.4, i = 0;
+    secoes.forEach(function(s,k){ if(s.offsetTop <= meio) i = k; });
+    return i;
+  }
+  function atualizar(){
+    if(deck) return;
+    var rolavel = document.documentElement.scrollHeight - innerHeight;
+    barra.style.width = (rolavel > 0 ? (scrollY/rolavel)*100 : 0) + '%';
+    marcar(indiceRolagem());
+  }
+  /* A conferência roda direto no evento (barata, e independe de rAF).
+     A barra de progresso usa rAF, com destravamento por tempo: em documento
+     não renderizado o rAF não roda e a flag ficaria presa para sempre. */
+  var agendado = false, ultimaConferencia = 0;
+  addEventListener('scroll', function(){
+    if(deck) return;
+    var t = performance.now();
+    if(t - ultimaConferencia > 90){ ultimaConferencia = t; conferirPendentes(); }
+    if(agendado) return;
+    agendado = true;
+    requestAnimationFrame(function(){ atualizar(); agendado = false; });
+    setTimeout(function(){ agendado = false; }, 400);
+  }, {passive:true});
+
+  /* ── rolagem: o teclado anda dentro da seção antes de pular ──────── */
+  function irPara(dir){
+    var atualR = indiceRolagem();
+    var s = secoes[atualR], topo = s.offsetTop, fundo = topo + s.offsetHeight;
+    var passo = innerHeight * 0.86, folga = 24, destino;
+    if(dir > 0 && scrollY + innerHeight < fundo - folga){
+      destino = Math.min(scrollY + passo, fundo - innerHeight);
+    } else if(dir < 0 && scrollY > topo + folga){
+      destino = Math.max(scrollY - passo, topo);
+    } else {
+      var alvo = secoes[Math.min(secoes.length-1, Math.max(0, atualR+dir))];
+      if(!alvo) return;
+      destino = alvo.offsetTop;
+    }
+    scrollTo({top: destino, behavior: reduzido ? 'auto' : 'smooth'});
+  }
+
+  /* ── deck: entrada e saída de cada slide ─────────────────────────── */
+  function entrar(s){
+    s.classList.add('ativa');
+    cada(s.querySelectorAll('.rev'), function(el){ el.classList.add('dentro'); });
+    tracosDe(s).forEach(tracar);
+    if(planta && s.contains(planta)) iniciarPasseio();
+  }
+  /* roda quando o slide já saiu de cena: tudo volta ao ponto de partida
+     para a próxima entrada se apresentar de novo */
+  function sair(s){
+    s.classList.remove('ativa');
+    cada(s.querySelectorAll('.rev'), function(el){ el.classList.remove('dentro'); });
+    tracosDe(s).forEach(zerarTraco);
+    if(planta && s.contains(planta)) pararPasseio();
+  }
+
+  function ir(n, forcar){
+    n = Math.max(0, Math.min(N-1, n));
+    if(n === atual && !forcar) return;
+    var ant = atual;
+    atual = n;
+    if(ant >= 0 && ant !== n){
+      var velho = secoes[ant];
+      velho.classList.add('saindo');
+      setTimeout(function(){
+        if(secoes.indexOf(velho) === atual) return;
+        velho.classList.remove('atual','vai','volta','saindo');
+        sair(velho);
+      }, reduzido ? 0 : 1000);
+    }
+    var s = secoes[n];
+    s.classList.remove('saindo','vai','volta','atual');
+    void s.offsetWidth;
+    s.classList.add('atual');
+    if(ant >= 0 && ant !== n && !reduzido) s.classList.add(n > ant ? 'vai' : 'volta');
+    setTimeout(function(){ if(deck && secoes[atual] === s) entrar(s); }, ant >= 0 && !reduzido ? 180 : 0);
+    barra.style.width = ((n+1)/N*100) + '%';
+    marcar(n);
+    if(btAnt)  btAnt.disabled  = n === 0;
+    if(btProx) btProx.disabled = n === N-1;
+    if(history.replaceState) history.replaceState(null, '', '#' + (n+1));
+  }
+
+  /* #5 abre no quinto slide (como nos outros decks); #planta abre na seção */
+  function indiceDoHash(){
+    var h = decodeURIComponent(location.hash.slice(1));
+    if(!h) return 0;
+    if(/^\d+$/.test(h)) return Math.max(0, Math.min(N-1, parseInt(h,10) - 1));
+    var el = document.getElementById(h);
+    var s = el && el.closest('.slide');
+    return s ? secoes.indexOf(s) : 0;
+  }
+  addEventListener('hashchange', function(){ if(deck) ir(indiceDoHash()); });
+
+  /* Slide que passe da altura da tela (notebook baixo, janela estreita)
+     encolhe por inteiro até caber, em vez de cortar o rodapé. A largura vai
+     fixa em px junto com o zoom: largura em % seria recalculada no espaço
+     ampliado e as fotos não encolheriam, só o texto. */
+  function ajustar(){
+    secoes.forEach(function(s){
+      var filhos = [].slice.call(s.children).filter(function(c){
+        var p = getComputedStyle(c).position;
+        return p !== 'absolute' && p !== 'fixed';
+      });
+      filhos.forEach(function(c){ c.style.zoom = ''; c.style.width = ''; });
+      if(!deck || !filhos.length) return;
+      var cs = getComputedStyle(s);
+      var util = s.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+      var primeiro = filhos[0], ultimo = filhos[filhos.length-1];
+      var conteudo = ultimo.offsetTop + ultimo.offsetHeight + parseFloat(getComputedStyle(ultimo).marginBottom)
+                   - (primeiro.offsetTop - parseFloat(getComputedStyle(primeiro).marginTop));
+      if(conteudo > util + 1){
+        var f = Math.max(.62, util / conteudo);
+        filhos.forEach(function(c){
+          c.style.width = c.offsetWidth + 'px';
+          c.style.zoom = f.toFixed(3);
+        });
+      }
+    });
+  }
+  var esperaAjuste;
+  addEventListener('resize', function(){
+    atualizar();
+    clearTimeout(esperaAjuste);
+    esperaAjuste = setTimeout(ajustar, 120);
+  });
+
+  function aplicarModo(){
+    var agora = telaLarga.matches;
+    if(agora === deck) return;
+    if(agora){
+      var i = indiceRolagem();
+      deck = true;
+      raiz.classList.add('deck');
+      secoes.forEach(function(s){
+        s.classList.remove('atual','saindo','vai','volta','ativa');
+        cada(s.querySelectorAll('.rev'), function(el){ el.classList.remove('dentro'); });
+      });
+      tracos.forEach(zerarTraco);
+      pararPasseio();
+      atual = -1;
+      ajustar();
+      ir(i, true);
+    } else {
+      var alvo = secoes[Math.max(0, atual)];
+      deck = false;
+      raiz.classList.remove('deck');
+      secoes.forEach(function(s){ s.classList.remove('atual','saindo','vai','volta'); });
+      ajustar();
+      reveladores.forEach(function(el){ el.classList.add('dentro'); });
+      tracos.forEach(tracar);
+      scrollTo({top: alvo.offsetTop, behavior: 'instant'});
+      atualizar();
+      conferirPendentes();
+    }
+  }
+  if(telaLarga.addEventListener) telaLarga.addEventListener('change', aplicarModo);
+  else if(telaLarga.addListener) telaLarga.addListener(aplicarModo);
+
+  /* ── lupa: qualquer imagem do projeto abre em tela cheia ─────────── */
+  var lupa      = document.getElementById('lupa');
+  var lupaImg   = document.getElementById('lupa-img');
+  var lupaCap   = document.getElementById('lupa-legenda');
+  var lupaConta = document.getElementById('lupa-conta');
+  var galeria   = [].slice.call(document.querySelectorAll('.ampliar'));
+  var atualLupa = -1;
+  function lupaAberta(){ return !!(lupa && lupa.classList.contains('aberta')); }
+
+  galeria.forEach(function(img, i){
+    img.setAttribute('tabindex', '0');
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'Ampliar: ' + (img.alt || 'imagem'));
+    img.addEventListener('click', function(){ abrir(i); });
+    img.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); e.stopPropagation(); abrir(i); }
+    });
+  });
+
+  function abrir(i){
+    if(!lupa || !galeria.length) return;
+    atualLupa = (i + galeria.length) % galeria.length;
+    var img = galeria[atualLupa];
+    lupaImg.src = img.getAttribute('data-zoom') || img.currentSrc || img.src;
+    lupaImg.alt = img.alt || '';
+    lupaCap.textContent = img.alt || '';
+    lupaConta.textContent = pad(atualLupa+1) + '/' + pad(galeria.length);
+    lupa.classList.add('aberta');
+    lupa.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    lupa.querySelector('.lupa-fechar').focus();
+  }
+  function fechar(){
+    if(!lupa) return;
+    lupa.classList.remove('aberta');
+    lupa.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if(atualLupa >= 0 && galeria[atualLupa]) galeria[atualLupa].focus({preventScroll: deck});
+    atualLupa = -1;
+  }
+  if(lupa){
+    lupa.addEventListener('click', function(e){
+      if(e.target === lupa || e.target.classList.contains('lupa-palco')) fechar();
+    });
+    lupa.querySelector('.lupa-fechar').addEventListener('click', fechar);
+    lupa.querySelector('.lupa-ant').addEventListener('click', function(){ abrir(atualLupa - 1); });
+    lupa.querySelector('.lupa-prox').addEventListener('click', function(){ abrir(atualLupa + 1); });
+  }
+
+  /* ── navegação 3D: o visualizador (31 MB) só carrega no clique ────── */
+  var palco3d = document.getElementById('tresd-palco');
+  var entrar3d = document.getElementById('tresd-entrar');
+  if(palco3d && entrar3d){
+    entrar3d.addEventListener('click', function(){
+      if(palco3d.classList.contains('carregado')) return;
+      var f = document.createElement('iframe');
+      f.src = palco3d.dataset.src;
+      f.title = 'Stand NGV Ecossistema em 3D';
+      f.allow = 'fullscreen; xr-spatial-tracking; gyroscope; accelerometer; magnetometer';
+      f.setAttribute('allowfullscreen', '');
+      palco3d.appendChild(f);
+      palco3d.classList.add('carregado');
+      f.focus();
+    });
+  }
+
+  /* ── planta interativa: conduz o olhar de área em área ───────────── */
+  var planta = document.querySelector('.planta-viva');
+  var passeio = null, tocado = false, marcas = [], itens = [];
+  function mostrar(z){
+    planta.dataset.zona = z;
+    planta.classList.add('guiando');
+    marcas.forEach(function(m){
+      var on = m.dataset.z === String(z);
+      m.classList.toggle('ativa', on);
+      if(on){
+        var cs = getComputedStyle(m);
+        /* o holofote mira o centro da área; o número fica ao lado do rótulo impresso */
+        planta.style.setProperty('--fx', (cs.getPropertyValue('--ax') || cs.getPropertyValue('--x')).trim());
+        planta.style.setProperty('--fy', (cs.getPropertyValue('--ay') || cs.getPropertyValue('--y')).trim());
+      }
+    });
+    itens.forEach(function(i){
+      var on = i.dataset.z === String(z);
+      i.classList.toggle('ativa', on);
+      i.setAttribute('aria-current', on ? 'true' : 'false');
+    });
+  }
+  /* enquanto ninguém interage, o stand se apresenta sozinho */
+  function iniciarPasseio(){
+    if(!planta || reduzido || tocado || passeio) return;
+    mostrar(1);
+    var z = 1;
+    passeio = setInterval(function(){ z = z % marcas.length + 1; mostrar(z); }, 3200);
+  }
+  function pararPasseio(){ if(passeio){ clearInterval(passeio); passeio = null; } }
+  if(planta){
+    marcas = [].slice.call(planta.querySelectorAll('.marca-zona'));
+    itens  = [].slice.call(planta.querySelectorAll('.item-zona'));
+    var tocar = function(el){ pararPasseio(); tocado = true; mostrar(el.dataset.z); };
+
+    marcas.concat(itens).forEach(function(el){
+      el.addEventListener('mouseenter', function(){ tocar(el); });
+      el.addEventListener('focus',      function(){ tocar(el); });
+      el.addEventListener('click',      function(){ tocar(el); });
+    });
+
+    if(temIO && !reduzido){
+      new IntersectionObserver(function(es){
+        if(deck) return;
+        es.forEach(function(e){
+          if(e.isIntersecting) iniciarPasseio();
+          else pararPasseio();
+        });
+      }, {threshold:.35}).observe(planta);
+    } else {
+      mostrar(1);
+    }
+  }
+
+  /* ── deck: teclado, roda, toque, trilho e setas ──────────────────── */
+  addEventListener('keydown', function(e){
+    if(e.metaKey || e.ctrlKey || e.altKey) return;
+    var k = e.key;
+    if(lupaAberta()){
+      if(k === 'Escape'){ e.preventDefault(); fechar(); }
+      else if(k === 'ArrowRight'){ e.preventDefault(); abrir(atualLupa + 1); }
+      else if(k === 'ArrowLeft'){ e.preventDefault(); abrir(atualLupa - 1); }
+      return;
+    }
+    /* espaço num botão ou link é clique, não troca de slide */
+    if(k === ' ' && e.target.closest && e.target.closest('button, a, [role="button"]')) return;
+    var frente = k==='ArrowDown'||k==='ArrowRight'||k==='PageDown'||k===' ';
+    var tras   = k==='ArrowUp'||k==='ArrowLeft'||k==='PageUp';
+    if(deck){
+      if(frente){ e.preventDefault(); ir(atual + 1); }
+      else if(tras){ e.preventDefault(); ir(atual - 1); }
+      else if(k==='Home'){ e.preventDefault(); ir(0); }
+      else if(k==='End'){ e.preventDefault(); ir(N-1); }
+      return;
+    }
+    if(frente){ e.preventDefault(); irPara(1); }
+    else if(tras){ e.preventDefault(); irPara(-1); }
+    else if(k==='Home'){ e.preventDefault(); scrollTo({top:0, behavior:'smooth'}); }
+    else if(k==='End'){ e.preventDefault(); secoes[secoes.length-1].scrollIntoView({behavior:'smooth'}); }
+  });
+
+  /* Um slide por gesto: o primeiro evento de cada gesto troca o slide e o
+     resto (inclusive a inércia do trackpad) é ignorado. Rodando sem parar,
+     a roda avança de novo a cada 1,1 s. */
+  var rodaUltima = 0, rodaTrocou = 0;
+  addEventListener('wheel', function(e){
+    if(!deck || lupaAberta()) return;
+    var d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    var t = performance.now(), novoGesto = t - rodaUltima > 250;
+    rodaUltima = t;
+    if(novoGesto ? Math.abs(d) >= 4 : (t - rodaTrocou > 1100 && Math.abs(d) >= 30)){
+      rodaTrocou = t;
+      ir(atual + (d > 0 ? 1 : -1));
+    }
+  }, {passive:true});
+
+  var toqueX = null, toqueY = 0;
+  addEventListener('touchstart', function(e){
+    if(e.touches.length !== 1){ toqueX = null; return; }
+    toqueX = e.touches[0].clientX; toqueY = e.touches[0].clientY;
+  }, {passive:true});
+  addEventListener('touchend', function(e){
+    if(!deck || toqueX === null || lupaAberta()){ toqueX = null; return; }
+    var dx = e.changedTouches[0].clientX - toqueX, dy = e.changedTouches[0].clientY - toqueY;
+    toqueX = null;
+    var d = Math.abs(dx) > Math.abs(dy) ? dx : dy;
+    if(Math.abs(d) > 60) ir(atual + (d < 0 ? 1 : -1));
+  }, {passive:true});
+
+  /* links internos (o trilho) trocam de slide em vez de rolar */
+  document.addEventListener('click', function(e){
+    if(!deck) return;
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var el = document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
+    var s = el && el.closest('.slide');
+    if(!s) return;
+    e.preventDefault();
+    ir(secoes.indexOf(s));
+  });
+  if(btAnt)  btAnt.addEventListener('click',  function(){ ir(atual - 1); });
+  if(btProx) btProx.addEventListener('click', function(){ ir(atual + 1); });
+
+  /* ── início ──────────────────────────────────────────────────────── */
+  if(deck){
+    ajustar();
+    ir(indiceDoHash(), true);
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(ajustar);
+    addEventListener('load', ajustar);
+  } else {
+    if(/^#\d+$/.test(location.hash)){
+      var s0 = secoes[indiceDoHash()];
+      if(s0) scrollTo({top: s0.offsetTop, behavior: 'instant'});
+    }
+    atualizar();
+    conferirPendentes();
+    addEventListener('load', conferirPendentes);
+  }
+})();
+</script>
+</body>
+</html>
